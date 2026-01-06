@@ -1,0 +1,11 @@
+/* Design tokens: colors only */
+
+:root {
+    --color-black: #050505;
+    --color-gray: #333333;
+    --color-dark-gray: #646464;
+    --color-medium-gray: #989795;
+    --color-light-gray: #F9F9F9;
+    --color-red: #C2070B;
+    --color-white: #FFFFFF;
+}

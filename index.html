@@ -1,11 +1,341 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>R Transportes Express | Sua entrega rápida e segura</title>
+
+    <title>R Transportes Express | Entrega rápida e segura</title>
+    <meta name="description"
+        content="R Transportes Express: serviço de entrega rápido e seguro com motos, carros e caminhões. Transporte de itens pequenos a grandes com agilidade e cuidado.">
+    <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+    <meta name="googlebot" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+    <meta name="author" content="R Transportes Express">
+    <meta name="theme-color" content="#050505">
+
+    <!-- Performance hints for DM Sans (loaded via CSS) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <!-- Icons -->
+    <link rel="icon" type="image/png" href="src/assets/brand/logo.png">
+    <link rel="apple-touch-icon" href="src/assets/brand/logo.png">
+
+    <!-- Open Graph -->
+    <meta property="og:locale" content="pt_BR">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="R Transportes Express">
+    <meta property="og:title" content="R Transportes Express | Entrega rápida e segura">
+    <meta property="og:description"
+        content="Serviço de entrega rápido e seguro com motos, carros e caminhões. Itens pequenos a grandes com agilidade e cuidado.">
+    <meta property="og:image" content="src/assets/brand/logo.png">
+    <meta property="og:image:alt" content="Logo da R Transportes Express">
+
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="R Transportes Express | Entrega rápida e segura">
+    <meta name="twitter:description"
+        content="Entregas rápidas e seguras com motos, carros e caminhões. Itens pequenos a grandes com agilidade e cuidado.">
+    <meta name="twitter:image" content="src/assets/brand/logo.png">
+
+    <link rel="stylesheet" href="src/styles/globals.css">
+
+    <!-- Structured data (SEO) -->
+    <script type="application/ld+json">
+        {
+            "@context": "https://schema.org",
+            "@type": "LocalBusiness",
+            "name": "R Transportes Express",
+            "description": "Serviço de entrega rápido e seguro com motos, carros e caminhões. Transporte de itens pequenos a grandes com agilidade e cuidado.",
+            "image": "src/assets/brand/logo.png",
+            "serviceType": [
+                "Entrega expressa",
+                "Transporte de pequenas encomendas",
+                "Transporte de itens médios",
+                "Transporte de itens grandes"
+            ]
+        }
+    </script>
 </head>
+
 <body>
-    <h1>R Transportes Express</h1>    
+    <header class="header__content">
+        <a href="/" class="header__logo-link">
+            <img src="src/assets/brand/logo.png" alt="Logo da R Transportes Express" class="header__logo-image">
+        </a>
+        <nav class="header__nav">
+            <ul class="header__nav-list">
+                <li class="header__nav-item"><a href="#about" class="header__nav-link">Sobre Nós</a></li>
+                <li class="header__nav-item"><a href="#services" class="header__nav-link">Serviços</a></li>
+                <li class="header__nav-item"><a href="#process" class="header__nav-link">Processo</a></li>
+                <li class="header__nav-item"><a href="#testimonials" class="header__nav-link">Depoimentos</a></li>
+                <li class="header__nav-item"><a href="#security" class="header__nav-link">Segurança</a></li>
+            </ul>  
+        </nav>
+        <button>
+            <span>
+                Solicitar uma entrega
+            </span>
+            <div>
+                <img src="src/assets/icons/ArrowUpRight.svg" alt="Seta para a direita cima">
+            </div>
+        </button>
+    </header>
+    <section class="hero__content">
+        <article class="hero__article">
+            <div class="hero__promo">
+                <div class="hero__promo-icon">
+                    <img src="src/assets/icons/gift-light.svg" alt="Ícone de promoção">
+                </div>
+                <main class="hero__promo-container">
+                    <h4>Clique e ganhe um prêmio!</h4>
+                    <p>Bloqueado</p>
+                </main>
+            </div>
+            <main class="hero__texts">
+                <span class="hero__texts-span">
+                    Entregas Rápidas e Seguras
+                </span>
+                <h1 class="hero__texts-title">
+                    Sua Entrega
+                    <br>
+                    Nossa Prioridade
+                </h1>
+                <p class="hero__texts-description">
+                    Com profissionais dedicas, e empenhados em levar sua entrega em excelente estado, garantimos uma viagem segura e sem riscos
+                </p>
+                <button>
+                    <span>
+                        Solicitar uma entrega
+                    </span>
+                    <div>
+                        <img src="src/assets/icons/ArrowUpRight.svg" alt="Seta para a direita cima">
+                    </div>
+                </button>
+            </main>
+        </article>
+        <div class="hero__image-container">
+            <img src="src/assets/hero-image.png" alt="Imagem de um entregador com uma caixa na mão">
+        </div>
+    </section>
+    <section class="about__content" id="about">
+        <article class="about__article">
+            <h1 class="about__article-title">
+                Conheça a R Soluções Express, a sua entrega na melhor mão possível
+            </h1>
+            <p class="about__article-description">
+                Com profissionais dedicas, e empenhados em levar sua entrega em excelente estado, garantimos uma viagem segura e sem riscos
+            </p>
+        </article>
+        <div class="about__container-image">
+            <img src="src/assets/about-image.png" alt="Imagem de um entregador com uma caixa na mão">
+            <div class="about__container-absolute">
+                <ul>
+                    <li><img src="src/assets/icons/star.svg" alt="icone de estrela"></li>
+                    <li><img src="src/assets/icons/star.svg" alt="icone de estrela"></li>
+                    <li><img src="src/assets/icons/star.svg" alt="icone de estrela"></li>
+                    <li><img src="src/assets/icons/star.svg" alt="icone de estrela"></li>
+                    <li><img src="src/assets/icons/star.svg" alt="icone de estrela"></li>
+                </ul>
+                <span>4.96/5 Avaliação</span>
+            </div>
+        </div>
+        <aside class="about__range"> <!--  Essa parte vira um carrousel de 4 no desktop e 2 no mobile sem precisar de botões de navegação e sem dots -->
+            <div class="about__range-item">
+                <h2>94%</h2>
+                <p>Uma taxa de satisfação que condiz com nossa entrega de qualidade</p>
+            </div>
+            <div class="about__range-item">
+                <h2>15+</h2>
+                <p>Mais de 15 anos de experiência entregando todo tipo de produto</p>
+            </div>
+            <div class="about__range-item">
+                <h2>10.000</h2>
+                <p>Mais de 10mil clientes atendidos em toda a nossa trajetória</p>
+            </div>
+            <div class="about__range-item">
+                <h2>R$4M</h2>
+                <p>Mais de R$4 milhões em entregas realizadas com sucesso</p>
+            </div>
+        </aside>
+    </section>
+    <section class="services__content" id="services">
+        <h1 class="services__title">
+            Conheça todos os nossos serviços de entrega para você
+        </h1>
+        <main class="services__carousel">
+            <div class="services__carousel-item">
+                <img src="src/assets/modalidade-de-atendimento.png" alt="entregador correndo de moto" loading="lazy">
+                <div class="services__carousel-item-icon-absolute">
+                    <img src="src/assets/icons/Headset.svg" alt="Ícone de atendimento">
+                </div>
+                <main class="services__carousel-container">
+                    <h2 class="services__carousel-title">
+                        Modalidade de Atendimento
+                    </h2>
+                    <ul>
+                        <li>
+                            <img src="src/assets/icons/samu.svg" alt="">
+                            <span>Serviço Emergêncial</span>
+                        </li>
+                        <li>
+                            <img src="src/assets/icons/samu.svg" alt="">
+                            <span>Serviços Agendados</span>
+                        </li>
+                    </ul>
+                    <button>
+                        <span>  
+                            Solicitar esse serviço
+                        </span>
+                        <div>
+                            <img src="src/assets/icons/ArrowUpRight.svg" alt="Seta para a direita cima">
+                        </div>
+                    </button>
+                </main>
+            </div>
+            <div class="services__carousel-item">
+                <img src="src/assets/logistica-documental.png" alt="documentos sendo entregues" loading="lazy">
+                <div class="services__carousel-item-icon-absolute">
+                    <img src="src/assets/icons/doc.svg" alt="Ícone de documento">
+                </div>
+                <main class="services__carousel-container">
+                    <h2 class="services__carousel-title">
+                        Logistica Documental
+                    </h2>
+                    <ul>
+                        <li>
+                            <img src="src/assets/icons/samu.svg" alt="">
+                            <span>Serviço de Cartórios</span>
+                        </li>
+                        <li>
+                            <img src="src/assets/icons/samu.svg" alt="">
+                            <span>Serviços Bancários</span>
+                        </li>
+                        <li>
+                            <img src="src/assets/icons/samu.svg" alt="">
+                            <span>Correios e Malotes</span>
+                        </li>
+                        <li>
+                            <img src="src/assets/icons/samu.svg" alt="">
+                            <span>Coleta e Assinatura</span>
+                        </li>
+                    </ul>
+                    <button>
+                        <span>  
+                            Solicitar esse serviço
+                        </span>
+                        <div>
+                            <img src="src/assets/icons/ArrowUpRight.svg" alt="Seta para a direita cima">
+                        </div>
+                    </button>
+                </main>
+            </div>
+            <div class="services__carousel-item">
+                <img src="src/assets/varejo.png" alt="imagem relacionada ao varejo" loading="lazy">
+                <div class="services__carousel-item-icon-absolute">
+                    <img src="src/assets/icons/Basket.svg" alt="Ícone de varejo">
+                </div>
+                <main class="services__carousel-container">
+                    <h2 class="services__carousel-title">
+                        E-commerce e Varejo
+                    </h2>
+                    <ul>
+                        <li>
+                            <img src="src/assets/icons/samu.svg" alt="">
+                            <span>Retiradas em Loja</span>
+                        </li>
+                        <li>
+                            <img src="src/assets/icons/samu.svg" alt="">
+                            <span>Brindes e convites</span>
+                        </li>
+                        <li>
+                            <img src="src/assets/icons/samu.svg" alt="">
+                            <span>Transporte de eletrônicos</span>
+                        </li>
+                    </ul>
+                    <button>
+                        <span>  
+                            Solicitar esse serviço
+                        </span>
+                        <div>
+                            <img src="src/assets/icons/ArrowUpRight.svg" alt="Seta para a direita cima">
+                        </div>
+                    </button>
+                </main>
+            </div>
+            <div class="services__carousel-item">
+                <img src="src/assets/varejo.png" alt="imagem relacionada ao varejo" loading="lazy">
+                <div class="services__carousel-item-icon-absolute">
+                    <img src="src/assets/icons/FirstAidKit.svg" alt="Ícone de saúde">
+                </div>
+                <main class="services__carousel-container">
+                    <h2 class="services__carousel-title">
+                        Saúde e Farmacêutica
+                    </h2>
+                    <ul>
+                        <li>
+                            <img src="src/assets/icons/samu.svg" alt="">
+                            <span>Linha Farmacêutica</span>
+                        </li>
+                        <li>
+                            <img src="src/assets/icons/samu.svg" alt="">
+                            <span>Gestão de exames</span>
+                        </li>
+                    </ul>
+                    <button>
+                        <span>  
+                            Solicitar esse serviço
+                        </span>
+                        <div>
+                            <img src="src/assets/icons/ArrowUpRight.svg" alt="Seta para a direita cima">
+                        </div>
+                    </button>
+                </main>
+            </div>
+            <div class="services__carousel-item">
+                <img src="src/assets/varejo.png" alt="imagem relacionada ao varejo" loading="lazy">
+                <div class="services__carousel-item-icon-absolute">
+                    <img src="src/assets/icons/Key.svg" alt="Ícone de segurança">
+                </div>
+                <main class="services__carousel-container">
+                    <h2 class="services__carousel-title">
+                        Serviços Especiais
+                    </h2>
+                    <ul>
+                        <li>
+                            <img src="src/assets/icons/samu.svg" alt="">
+                            <span>Logística Aeroportuária</span>
+                        </li>
+                        <li>
+                            <img src="src/assets/icons/samu.svg" alt="">
+                            <span>Objetos pessoais</span>
+                        </li>
+                    </ul>
+                    <button>
+                        <span>  
+                            Solicitar esse serviço
+                        </span>
+                        <div>
+                            <img src="src/assets/icons/ArrowUpRight.svg" alt="Seta para a direita cima">
+                        </div>
+                    </button>
+                </main>
+            </div>
+        </main>
+        <aside class="services__controls">
+            <p>
+                Todos os serviços são oferecidos por profissionais super qualificados
+            </p>
+            <div class="services__controls-div">
+                <button>
+                    <img src="src/assets/icons/seta-esquerda.png" alt="prev">
+                </button>
+                <button>
+                    <img src="src/assets/icons/seta-direita.png" alt="next">
+                </button>
+            </div>
+        </aside>
+    </section>
 </body>
+
 </html>
