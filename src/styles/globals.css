@@ -1,6 +1,18 @@
 @import url('./reset.css');
 @import url('./tokens.css');
 
+@import url('../components/button__cta.css');
+
+@import url('../sections/header.css');
+@import url('../sections/hero.css');
+@import url('../sections/about.css');
+@import url('../sections/services.css');
+@import url('../sections/process.css');
+@import url('../sections/security.css');
+@import url('../sections/testimonials.css');
+@import url('../sections/transport.css');
+@import url('../sections/footer.css');
+
 @import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&display=swap');
 
 html {

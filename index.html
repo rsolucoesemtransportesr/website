@@ -40,6 +40,9 @@
 
     <link rel="stylesheet" href="src/styles/globals.css">
 
+    <!-- Splide (carrosséis) -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide.min.css">
+
     <!-- Structured data (SEO) -->
     <script type="application/ld+json">
         {
@@ -70,9 +73,9 @@
                 <li class="header__nav-item"><a href="#process" class="header__nav-link">Processo</a></li>
                 <li class="header__nav-item"><a href="#testimonials" class="header__nav-link">Depoimentos</a></li>
                 <li class="header__nav-item"><a href="#security" class="header__nav-link">Segurança</a></li>
-            </ul>  
+            </ul>
         </nav>
-        <button>
+        <button class="button__cta">
             <span>
                 Solicitar uma entrega
             </span>
@@ -102,9 +105,10 @@
                     Nossa Prioridade
                 </h1>
                 <p class="hero__texts-description">
-                    Com profissionais dedicas, e empenhados em levar sua entrega em excelente estado, garantimos uma viagem segura e sem riscos
+                    Com profissionais dedicas, e empenhados em levar sua entrega em excelente estado, garantimos uma
+                    viagem segura e sem riscos
                 </p>
-                <button>
+                <button class="button__cta">
                     <span>
                         Solicitar uma entrega
                     </span>
@@ -124,7 +128,8 @@
                 Conheça a R Soluções Express, a sua entrega na melhor mão possível
             </h1>
             <p class="about__article-description">
-                Com profissionais dedicas, e empenhados em levar sua entrega em excelente estado, garantimos uma viagem segura e sem riscos
+                Com profissionais dedicas, e empenhados em levar sua entrega em excelente estado, garantimos uma viagem
+                segura e sem riscos
             </p>
         </article>
         <div class="about__container-image">
@@ -140,198 +145,207 @@
                 <span>4.96/5 Avaliação</span>
             </div>
         </div>
-        <aside class="about__range"> <!--  Essa parte vira um carrousel de 4 no desktop e 2 no mobile sem precisar de botões de navegação e sem dots -->
-            <div class="about__range-item">
-                <h2>94%</h2>
-                <p>Uma taxa de satisfação que condiz com nossa entrega de qualidade</p>
+        <section class="splide about__range about__range-splide" aria-label="Números e resultados">
+            <div class="splide__track">
+                <ul class="splide__list">
+                    <li class="splide__slide about__range-item">
+                        <h2>94%</h2>
+                        <p>Uma taxa de satisfação que condiz com nossa entrega de qualidade</p>
+                    </li>
+                    <li class="splide__slide about__range-item">
+                        <h2>15+</h2>
+                        <p>Mais de 15 anos de experiência entregando todo tipo de produto</p>
+                    </li>
+                    <li class="splide__slide about__range-item">
+                        <h2>10.000</h2>
+                        <p>Mais de 10mil clientes atendidos em toda a nossa trajetória</p>
+                    </li>
+                    <li class="splide__slide about__range-item">
+                        <h2>R$4M</h2>
+                        <p>Mais de R$4 milhões em entregas realizadas com sucesso</p>
+                    </li>
+                </ul>
             </div>
-            <div class="about__range-item">
-                <h2>15+</h2>
-                <p>Mais de 15 anos de experiência entregando todo tipo de produto</p>
-            </div>
-            <div class="about__range-item">
-                <h2>10.000</h2>
-                <p>Mais de 10mil clientes atendidos em toda a nossa trajetória</p>
-            </div>
-            <div class="about__range-item">
-                <h2>R$4M</h2>
-                <p>Mais de R$4 milhões em entregas realizadas com sucesso</p>
-            </div>
-        </aside>
+        </section>
     </section>
     <section class="services__content" id="services">
         <h1 class="services__title">
             Conheça todos os nossos serviços de entrega para você
         </h1>
-        <main class="services__carousel">
-            <div class="services__carousel-item">
-                <img src="src/assets/modalidade-de-atendimento.png" alt="entregador correndo de moto" loading="lazy">
-                <div class="services__carousel-item-icon-absolute">
-                    <img src="src/assets/icons/Headset.svg" alt="Ícone de atendimento">
-                </div>
-                <main class="services__carousel-container">
-                    <h2 class="services__carousel-title">
-                        Modalidade de Atendimento
-                    </h2>
-                    <ul>
-                        <li>
-                            <img src="src/assets/icons/samu.svg" alt="">
-                            <span>Serviço Emergêncial</span>
-                        </li>
-                        <li>
-                            <img src="src/assets/icons/samu.svg" alt="">
-                            <span>Serviços Agendados</span>
-                        </li>
-                    </ul>
-                    <button>
-                        <span>  
-                            Solicitar esse serviço
-                        </span>
-                        <div>
-                            <img src="src/assets/icons/ArrowUpRight.svg" alt="Seta para a direita cima">
+        <section class="splide services__carousel services__carousel-splide" aria-label="Carrossel de serviços">
+            <div class="splide__track">
+                <ul class="splide__list">
+                    <li class="splide__slide services__carousel-item">
+                        <img src="src/assets/modalidade-de-atendimento.png" alt="entregador correndo de moto"
+                            loading="lazy">
+                        <div class="services__carousel-item-icon-absolute">
+                            <img src="src/assets/icons/Headset.svg" alt="Ícone de atendimento">
                         </div>
-                    </button>
-                </main>
-            </div>
-            <div class="services__carousel-item">
-                <img src="src/assets/logistica-documental.png" alt="documentos sendo entregues" loading="lazy">
-                <div class="services__carousel-item-icon-absolute">
-                    <img src="src/assets/icons/doc.svg" alt="Ícone de documento">
-                </div>
-                <main class="services__carousel-container">
-                    <h2 class="services__carousel-title">
-                        Logistica Documental
-                    </h2>
-                    <ul>
-                        <li>
-                            <img src="src/assets/icons/samu.svg" alt="">
-                            <span>Serviço de Cartórios</span>
-                        </li>
-                        <li>
-                            <img src="src/assets/icons/samu.svg" alt="">
-                            <span>Serviços Bancários</span>
-                        </li>
-                        <li>
-                            <img src="src/assets/icons/samu.svg" alt="">
-                            <span>Correios e Malotes</span>
-                        </li>
-                        <li>
-                            <img src="src/assets/icons/samu.svg" alt="">
-                            <span>Coleta e Assinatura</span>
-                        </li>
-                    </ul>
-                    <button>
-                        <span>  
-                            Solicitar esse serviço
-                        </span>
-                        <div>
-                            <img src="src/assets/icons/ArrowUpRight.svg" alt="Seta para a direita cima">
+                        <main class="services__carousel-container">
+                            <h2 class="services__carousel-title">
+                                Modalidade de Atendimento
+                            </h2>
+                            <ul>
+                                <li>
+                                    <img src="src/assets/icons/samu.svg" alt="">
+                                    <span>Serviço Emergêncial</span>
+                                </li>
+                                <li>
+                                    <img src="src/assets/icons/samu.svg" alt="">
+                                    <span>Serviços Agendados</span>
+                                </li>
+                            </ul>
+                            <button class="button__cta">
+                                <span>
+                                    Solicitar esse serviço
+                                </span>
+                                <div>
+                                    <img src="src/assets/icons/ArrowUpRight.svg" alt="Seta para a direita cima">
+                                </div>
+                            </button>
+                        </main>
+                    </li>
+                    <li class="splide__slide services__carousel-item">
+                        <img src="src/assets/logistica-documental.png" alt="documentos sendo entregues" loading="lazy">
+                        <div class="services__carousel-item-icon-absolute">
+                            <img src="src/assets/icons/doc.svg" alt="Ícone de documento">
                         </div>
-                    </button>
-                </main>
-            </div>
-            <div class="services__carousel-item">
-                <img src="src/assets/varejo.png" alt="imagem relacionada ao varejo" loading="lazy">
-                <div class="services__carousel-item-icon-absolute">
-                    <img src="src/assets/icons/Basket.svg" alt="Ícone de varejo">
-                </div>
-                <main class="services__carousel-container">
-                    <h2 class="services__carousel-title">
-                        E-commerce e Varejo
-                    </h2>
-                    <ul>
-                        <li>
-                            <img src="src/assets/icons/samu.svg" alt="">
-                            <span>Retiradas em Loja</span>
-                        </li>
-                        <li>
-                            <img src="src/assets/icons/samu.svg" alt="">
-                            <span>Brindes e convites</span>
-                        </li>
-                        <li>
-                            <img src="src/assets/icons/samu.svg" alt="">
-                            <span>Transporte de eletrônicos</span>
-                        </li>
-                    </ul>
-                    <button>
-                        <span>  
-                            Solicitar esse serviço
-                        </span>
-                        <div>
-                            <img src="src/assets/icons/ArrowUpRight.svg" alt="Seta para a direita cima">
+                        <main class="services__carousel-container">
+                            <h2 class="services__carousel-title">
+                                Logistica Documental
+                            </h2>
+                            <ul>
+                                <li>
+                                    <img src="src/assets/icons/samu.svg" alt="">
+                                    <span>Serviço de Cartórios</span>
+                                </li>
+                                <li>
+                                    <img src="src/assets/icons/samu.svg" alt="">
+                                    <span>Serviços Bancários</span>
+                                </li>
+                                <li>
+                                    <img src="src/assets/icons/samu.svg" alt="">
+                                    <span>Correios e Malotes</span>
+                                </li>
+                                <li>
+                                    <img src="src/assets/icons/samu.svg" alt="">
+                                    <span>Coleta e Assinatura</span>
+                                </li>
+                            </ul>
+                            <button class="button__cta">
+                                <span>
+                                    Solicitar esse serviço
+                                </span>
+                                <div>
+                                    <img src="src/assets/icons/ArrowUpRight.svg" alt="Seta para a direita cima">
+                                </div>
+                            </button>
+                        </main>
+                    </li>
+                    <li class="splide__slide services__carousel-item">
+                        <img src="src/assets/varejo.png" alt="imagem relacionada ao varejo" loading="lazy">
+                        <div class="services__carousel-item-icon-absolute">
+                            <img src="src/assets/icons/Basket.svg" alt="Ícone de varejo">
                         </div>
-                    </button>
-                </main>
-            </div>
-            <div class="services__carousel-item">
-                <img src="src/assets/varejo.png" alt="imagem relacionada ao varejo" loading="lazy">
-                <div class="services__carousel-item-icon-absolute">
-                    <img src="src/assets/icons/FirstAidKit.svg" alt="Ícone de saúde">
-                </div>
-                <main class="services__carousel-container">
-                    <h2 class="services__carousel-title">
-                        Saúde e Farmacêutica
-                    </h2>
-                    <ul>
-                        <li>
-                            <img src="src/assets/icons/samu.svg" alt="">
-                            <span>Linha Farmacêutica</span>
-                        </li>
-                        <li>
-                            <img src="src/assets/icons/samu.svg" alt="">
-                            <span>Gestão de exames</span>
-                        </li>
-                    </ul>
-                    <button>
-                        <span>  
-                            Solicitar esse serviço
-                        </span>
-                        <div>
-                            <img src="src/assets/icons/ArrowUpRight.svg" alt="Seta para a direita cima">
+                        <main class="services__carousel-container">
+                            <h2 class="services__carousel-title">
+                                E-commerce e Varejo
+                            </h2>
+                            <ul>
+                                <li>
+                                    <img src="src/assets/icons/samu.svg" alt="">
+                                    <span>Retiradas em Loja</span>
+                                </li>
+                                <li>
+                                    <img src="src/assets/icons/samu.svg" alt="">
+                                    <span>Brindes e convites</span>
+                                </li>
+                                <li>
+                                    <img src="src/assets/icons/samu.svg" alt="">
+                                    <span>Transporte de eletrônicos</span>
+                                </li>
+                            </ul>
+                            <button class="button__cta">
+                                <span>
+                                    Solicitar esse serviço
+                                </span>
+                                <div>
+                                    <img src="src/assets/icons/ArrowUpRight.svg" alt="Seta para a direita cima">
+                                </div>
+                            </button>
+                        </main>
+                    </li>
+                    <li class="splide__slide services__carousel-item">
+                        <img src="src/assets/varejo.png" alt="imagem relacionada ao varejo" loading="lazy">
+                        <div class="services__carousel-item-icon-absolute">
+                            <img src="src/assets/icons/FirstAidKit.svg" alt="Ícone de saúde">
                         </div>
-                    </button>
-                </main>
-            </div>
-            <div class="services__carousel-item">
-                <img src="src/assets/varejo.png" alt="imagem relacionada ao varejo" loading="lazy">
-                <div class="services__carousel-item-icon-absolute">
-                    <img src="src/assets/icons/Key.svg" alt="Ícone de segurança">
-                </div>
-                <main class="services__carousel-container">
-                    <h2 class="services__carousel-title">
-                        Serviços Especiais
-                    </h2>
-                    <ul>
-                        <li>
-                            <img src="src/assets/icons/samu.svg" alt="">
-                            <span>Logística Aeroportuária</span>
-                        </li>
-                        <li>
-                            <img src="src/assets/icons/samu.svg" alt="">
-                            <span>Objetos pessoais</span>
-                        </li>
-                    </ul>
-                    <button>
-                        <span>  
-                            Solicitar esse serviço
-                        </span>
-                        <div>
-                            <img src="src/assets/icons/ArrowUpRight.svg" alt="Seta para a direita cima">
+                        <main class="services__carousel-container">
+                            <h2 class="services__carousel-title">
+                                Saúde e Farmacêutica
+                            </h2>
+                            <ul>
+                                <li>
+                                    <img src="src/assets/icons/samu.svg" alt="">
+                                    <span>Linha Farmacêutica</span>
+                                </li>
+                                <li>
+                                    <img src="src/assets/icons/samu.svg" alt="">
+                                    <span>Gestão de exames</span>
+                                </li>
+                            </ul>
+                            <button class="button__cta">
+                                <span>
+                                    Solicitar esse serviço
+                                </span>
+                                <div>
+                                    <img src="src/assets/icons/ArrowUpRight.svg" alt="Seta para a direita cima">
+                                </div>
+                            </button>
+                        </main>
+                    </li>
+                    <li class="splide__slide services__carousel-item">
+                        <img src="src/assets/varejo.png" alt="imagem relacionada ao varejo" loading="lazy">
+                        <div class="services__carousel-item-icon-absolute">
+                            <img src="src/assets/icons/Key.svg" alt="Ícone de segurança">
                         </div>
-                    </button>
-                </main>
+                        <main class="services__carousel-container">
+                            <h2 class="services__carousel-title">
+                                Serviços Especiais
+                            </h2>
+                            <ul>
+                                <li>
+                                    <img src="src/assets/icons/samu.svg" alt="">
+                                    <span>Logística Aeroportuária</span>
+                                </li>
+                                <li>
+                                    <img src="src/assets/icons/samu.svg" alt="">
+                                    <span>Objetos pessoais</span>
+                                </li>
+                            </ul>
+                            <button class="button__cta">
+                                <span>
+                                    Solicitar esse serviço
+                                </span>
+                                <div>
+                                    <img src="src/assets/icons/ArrowUpRight.svg" alt="Seta para a direita cima">
+                                </div>
+                            </button>
+                        </main>
+                    </li>
+                </ul>
             </div>
-        </main>
+        </section>
         <aside class="services__controls">
             <p>
                 Todos os serviços são oferecidos por profissionais super qualificados
             </p>
             <div class="services__controls-div">
-                <button>
+                <button class="splide__arrow--prev" type="button" aria-label="Serviço anterior">
                     <img src="src/assets/icons/seta-esquerda.png" alt="prev">
                 </button>
-                <button>
-                    <img src="src/assets/icons/seta-direita.png" alt="next">
+                <button class="splide__arrow--next" type="button" aria-label="Próximo serviço">
+                    <img src="src/assets/icons/seta-esquerda.png" alt="next">
                 </button>
             </div>
         </aside>
@@ -342,7 +356,8 @@
                 Entenda todo o processo que temos com o seu produto
             </h1>
             <p class="process__article-description">
-                Desde a coleta até a entrega, cada etapa do nosso processo é cuidadosamente planejada para garantir que seu produto chegue ao destino final em perfeitas condições e dentro do prazo estipulado.
+                Desde a coleta até a entrega, cada etapa do nosso processo é cuidadosamente planejada para garantir que
+                seu produto chegue ao destino final em perfeitas condições e dentro do prazo estipulado.
             </p>
         </article>
         <main class="process__carousel">
@@ -355,7 +370,8 @@
                 </div>
                 <aside class="process__carousel-item-content">
                     <h2>Coleta</h2>
-                    <p>Agendamos a coleta do seu produto no local e horário mais conveniente para você, garantindo praticidade e flexibilidade.</p>
+                    <p>Agendamos a coleta do seu produto no local e horário mais conveniente para você, garantindo
+                        praticidade e flexibilidade.</p>
                 </aside>
             </div>
             <div class="process__carousel-item">
@@ -367,7 +383,8 @@
                 </div>
                 <aside class="process__carousel-item-content">
                     <h2>Acomodação</h2>
-                    <p>Organizar e proteger seu produto durante o transporte para garantir que ele chegue em perfeitas condições.</p>
+                    <p>Organizar e proteger seu produto durante o transporte para garantir que ele chegue em perfeitas
+                        condições.</p>
                 </aside>
             </div>
             <div class="process__carousel-item">
@@ -406,7 +423,7 @@
                 <aside class="transport__carousel-item-content">
                     <h2>Moto</h2>
                     <p>Ideal para entregas rápidas e ágeis em áreas urbanas, garantindo eficiência no trânsito.</p>
-                     <button>
+                    <button>
                         <span>
                             Solicitar esse serviço
                         </span>
@@ -420,8 +437,9 @@
                 <img src="src/assets/carro.png" alt="carro de entrega" loading="lazy">
                 <aside class="transport__carousel-item-content">
                     <h2>Carro</h2>
-                    <p>Perfeito para entregas que exigem maior capacidade de carga e proteção do produto durante o transporte.</p>
-                     <button>
+                    <p>Perfeito para entregas que exigem maior capacidade de carga e proteção do produto durante o
+                        transporte.</p>
+                    <button>
                         <span>
                             Solicitar esse serviço
                         </span>
@@ -436,7 +454,7 @@
                 <aside class="transport__carousel-item-content">
                     <h2>Fiorino</h2>
                     <p>Ideal para entregas que requerem maior volume e proteção extra durante o transporte.</p>
-                     <button>
+                    <button>
                         <span>
                             Solicitar esse serviço
                         </span>
@@ -450,8 +468,9 @@
                 <img src="src/assets/caminhao.png" alt="caminhao de entrega" loading="lazy">
                 <aside class="transport__carousel-item-content">
                     <h2>Caminhão Baú</h2>
-                    <p>Perfeito para entregas de grandes volumes que necessitam de proteção e segurança durante o transporte.</p>
-                     <button>
+                    <p>Perfeito para entregas de grandes volumes que necessitam de proteção e segurança durante o
+                        transporte.</p>
+                    <button>
                         <span>
                             Solicitar esse serviço
                         </span>
@@ -461,7 +480,7 @@
                     </button>
                 </aside>
             </div>
-        </main> 
+        </main>
     </section>
     <section class="security__content" id="security">
         <div class="security__phone1">
@@ -493,7 +512,8 @@
                 Sua entrega está na mão da pessoa certa!
             </h1>
             <p class="security__article-description">
-                Sua encomenda é monitorada em tempo real pela nossa central de operações. Nossa frota é 100% rastreada internamente, garantindo que os profissionais sigam rotas exclusivas e sem desvios.
+                Sua encomenda é monitorada em tempo real pela nossa central de operações. Nossa frota é 100% rastreada
+                internamente, garantindo que os profissionais sigam rotas exclusivas e sem desvios.
             </p>
             <button>
                 <span>
@@ -528,7 +548,9 @@
             <div class="testimonials__carousel-item">
                 <article class="testimonials__carousel-item-article">
                     <p>
-                        Excelente no atendimento muito educado, pontuais e de extrema confiança eu indico para todas empresas que eu presto serviço como motorista executivo e quando precisa de motoboy ou logística eu indico eles. Segurança, pontualidade e muita educação no atendimento ao cliente.
+                        Excelente no atendimento muito educado, pontuais e de extrema confiança eu indico para todas
+                        empresas que eu presto serviço como motorista executivo e quando precisa de motoboy ou logística
+                        eu indico eles. Segurança, pontualidade e muita educação no atendimento ao cliente.
                     </p>
                     <ul>
                         <li><img src="src/assets/icons/star.svg" alt="icone de estrela"></li>
@@ -551,7 +573,9 @@
             <div class="testimonials__carousel-item">
                 <article class="testimonials__carousel-item-article">
                     <p>
-                        Excelente no atendimento muito educado, pontuais e de extrema confiança eu indico para todas empresas que eu presto serviço como motorista executivo e quando precisa de motoboy ou logística eu indico eles. Segurança, pontualidade e muita educação no atendimento ao cliente.
+                        Excelente no atendimento muito educado, pontuais e de extrema confiança eu indico para todas
+                        empresas que eu presto serviço como motorista executivo e quando precisa de motoboy ou logística
+                        eu indico eles. Segurança, pontualidade e muita educação no atendimento ao cliente.
                     </p>
                     <ul>
                         <li><img src="src/assets/icons/star.svg" alt="icone de estrela"></li>
@@ -574,7 +598,9 @@
             <div class="testimonials__carousel-item">
                 <article class="testimonials__carousel-item-article">
                     <p>
-                        Excelente no atendimento muito educado, pontuais e de extrema confiança eu indico para todas empresas que eu presto serviço como motorista executivo e quando precisa de motoboy ou logística eu indico eles. Segurança, pontualidade e muita educação no atendimento ao cliente.
+                        Excelente no atendimento muito educado, pontuais e de extrema confiança eu indico para todas
+                        empresas que eu presto serviço como motorista executivo e quando precisa de motoboy ou logística
+                        eu indico eles. Segurança, pontualidade e muita educação no atendimento ao cliente.
                     </p>
                     <ul>
                         <li><img src="src/assets/icons/star.svg" alt="icone de estrela"></li>
@@ -597,7 +623,9 @@
             <div class="testimonials__carousel-item">
                 <article class="testimonials__carousel-item-article">
                     <p>
-                        Excelente no atendimento muito educado, pontuais e de extrema confiança eu indico para todas empresas que eu presto serviço como motorista executivo e quando precisa de motoboy ou logística eu indico eles. Segurança, pontualidade e muita educação no atendimento ao cliente.
+                        Excelente no atendimento muito educado, pontuais e de extrema confiança eu indico para todas
+                        empresas que eu presto serviço como motorista executivo e quando precisa de motoboy ou logística
+                        eu indico eles. Segurança, pontualidade e muita educação no atendimento ao cliente.
                     </p>
                     <ul>
                         <li><img src="src/assets/icons/star.svg" alt="icone de estrela"></li>
@@ -620,7 +648,9 @@
             <div class="testimonials__carousel-item">
                 <article class="testimonials__carousel-item-article">
                     <p>
-                        Excelente no atendimento muito educado, pontuais e de extrema confiança eu indico para todas empresas que eu presto serviço como motorista executivo e quando precisa de motoboy ou logística eu indico eles. Segurança, pontualidade e muita educação no atendimento ao cliente.
+                        Excelente no atendimento muito educado, pontuais e de extrema confiança eu indico para todas
+                        empresas que eu presto serviço como motorista executivo e quando precisa de motoboy ou logística
+                        eu indico eles. Segurança, pontualidade e muita educação no atendimento ao cliente.
                     </p>
                     <ul>
                         <li><img src="src/assets/icons/star.svg" alt="icone de estrela"></li>
@@ -683,8 +713,8 @@
                     font-size: 16px;
                     line-height: 100%;
                 ">
-                    <img src="https://www.alephsramosdev.com.br/alephsramosdev-icon.png"
-                        alt="project-by-alephsramosdev" loading="eager" style="
+                    <img src="https://www.alephsramosdev.com.br/alephsramosdev-icon.png" alt="project-by-alephsramosdev"
+                        loading="eager" style="
                         width: 26px;
                         height: 26px;
                         object-fit: contain;
@@ -694,6 +724,10 @@
             </p>
         </div>
     </footer>
+
+    <script defer src="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/js/splide.min.js"></script>
+    <script defer src="src/scripts/about-range-carousel.js"></script>
+    <script defer src="src/scripts/services-carousel.js"></script>
 </body>
 
 </html>
