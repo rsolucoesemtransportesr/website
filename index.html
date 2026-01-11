@@ -67,7 +67,24 @@
     </script>
 </head>
 
-<body>
+<body class="is-page-loading">
+    <div class="page-loader" data-page-loader aria-hidden="true">
+        <img class="page-loader__logo" src="src/assets/brand/logo.png" alt="" width="180" height="180">
+    </div>
+
+    <div class="prize-banner" data-prize-banner role="status" aria-live="polite" aria-hidden="true">
+        <p class="prize-banner__text">Você resgatou um prêmio, aproveite!</p>
+        <a class="button__cta prize-banner__cta" href="https://wa.me/5511983675067" target="_blank"
+            rel="noopener noreferrer" aria-label="Chamar no WhatsApp: 11 98367-5067">
+            <span>
+                Chamar no WhatsApp
+            </span>
+            <div>
+                <img src="src/assets/icons/ArrowUpRight.svg" alt="Seta para a direita cima">
+            </div>
+        </a>
+    </div>
+
     <header class="header__content" data-header>
         <a href="/" class="header__logo-link" aria-label="Ir para o início">
             <img src="src/assets/brand/logo.png" alt="Logo da R Transportes Express" class="header__logo-image">
@@ -85,7 +102,7 @@
         <div class="header__drawer" id="header-drawer" data-header-drawer>
             <nav class="header__nav" aria-label="Navegação principal">
                 <ul class="header__nav-list">
-                    <li class="header__nav-item"><a href="#about" class="header__nav-link">Sobre Nós</a></li>
+                    <li class="header__nav-item"><a href="#about" class="header__nav-link">Sobre nós</a></li>
                     <li class="header__nav-item"><a href="#services" class="header__nav-link">Serviços</a></li>
                     <li class="header__nav-item"><a href="#process" class="header__nav-link">Processo</a></li>
                     <li class="header__nav-item"><a href="#testimonials" class="header__nav-link">Depoimentos</a></li>
@@ -93,14 +110,15 @@
                 </ul>
             </nav>
 
-            <button class="button__cta header__cta" type="button">
+            <a class="button__cta header__cta" href="https://wa.me/5511983675067" target="_blank"
+                rel="noopener noreferrer" aria-label="Chamar no WhatsApp: 11 98367-5067">
                 <span>
                     Solicitar uma entrega
                 </span>
                 <div>
                     <img src="src/assets/icons/ArrowUpRight.svg" alt="Seta para a direita cima">
                 </div>
-            </button>
+            </a>
         </div>
     </header>
     <section class="hero__content">
@@ -119,22 +137,23 @@
                     Entregas Rápidas e Seguras
                 </span>
                 <h1 class="hero__texts-title">
-                    Sua Entrega
+                    Sua entrega
                     <br>
-                    Nossa Prioridade
+                    Nossa prioridade
                 </h1>
                 <p class="hero__texts-description">
-                    Com profissionais dedicas, e empenhados em levar sua entrega em excelente estado, garantimos uma
-                    viagem segura e sem riscos
+                    Precisa entregar rápido e sem dor de cabeça? Fala com a gente no WhatsApp e a R Transportes Express
+                    cuida do seu envio com agilidade, cuidado e comunicação do início ao fim.
                 </p>
-                <button class="button__cta">
+                <a class="button__cta" href="https://wa.me/5511983675067" target="_blank" rel="noopener noreferrer"
+                    aria-label="Chamar no WhatsApp: 11 98367-5067">
                     <span>
                         Solicitar uma entrega
                     </span>
                     <div>
                         <img src="src/assets/icons/ArrowUpRight.svg" alt="Seta para a direita cima">
                     </div>
-                </button>
+                </a>
             </main>
         </article>
         <div class="hero__image-container" data-aos="fade-up" data-aos-delay="100">
@@ -144,24 +163,24 @@
     <section class="about__content" id="about">
         <article class="about__article" data-aos="fade-up">
             <h1 class="about__article-title">
-                Conheça a R Soluções Express, a sua entrega na melhor mão possível
+                Conheça a R Transportes Express: sua entrega nas melhores mãos
             </h1>
             <p class="about__article-description">
-                Com profissionais dedicas, e empenhados em levar sua entrega em excelente estado, garantimos uma viagem
-                segura e sem riscos
+                A gente trabalha com atendimento direto, coleta ágil e rotas bem definidas para sua encomenda chegar do
+                jeito certo. Sem enrolação: você chama, a gente resolve.
             </p>
         </article>
         <div class="about__container-image" data-aos="fade-up" data-aos-delay="100">
             <img src="src/assets/about-image.png" alt="Imagem de um entregador com uma caixa na mão">
             <div class="rating__container-absolute">
                 <ul>
-                    <li><img src="src/assets/icons/star.svg" alt="icone de estrela"></li>
-                    <li><img src="src/assets/icons/star.svg" alt="icone de estrela"></li>
-                    <li><img src="src/assets/icons/star.svg" alt="icone de estrela"></li>
-                    <li><img src="src/assets/icons/star.svg" alt="icone de estrela"></li>
-                    <li><img src="src/assets/icons/star.svg" alt="icone de estrela"></li>
+                    <li><img src="src/assets/icons/star.svg" alt="" aria-hidden="true"></li>
+                    <li><img src="src/assets/icons/star.svg" alt="" aria-hidden="true"></li>
+                    <li><img src="src/assets/icons/star.svg" alt="" aria-hidden="true"></li>
+                    <li><img src="src/assets/icons/star.svg" alt="" aria-hidden="true"></li>
+                    <li><img src="src/assets/icons/star.svg" alt="" aria-hidden="true"></li>
                 </ul>
-                <span>4.96/5 Avaliação</span>
+                <span>4,9/5 Avaliações</span>
             </div>
         </div>
         <section class="splide about__range about__range-splide" aria-label="Números e resultados" data-aos="fade-up"
@@ -178,7 +197,7 @@
                     </li>
                     <li class="splide__slide about__range-item">
                         <h2>10.000</h2>
-                        <p>Mais de 10mil clientes atendidos em toda a nossa trajetória</p>
+                        <p>Mais de 10 mil clientes atendidos ao longo da nossa trajetória</p>
                     </li>
                     <li class="splide__slide about__range-item">
                         <h2>R$4M</h2>
@@ -190,7 +209,7 @@
     </section>
     <section class="services__content" id="services">
         <h1 class="services__title" data-aos="fade-up">
-            Conheça todos os nossos serviços de entrega para você
+            Serviços sob medida pra sua rotina de entregas
         </h1>
         <section class="splide services__carousel services__carousel-splide" aria-label="Carrossel de serviços"
             data-aos="fade-up" data-aos-delay="100">
@@ -200,7 +219,7 @@
                         <img src="src/assets/modalidade-de-atendimento.png" alt="entregador correndo de moto"
                             loading="lazy">
                         <div class="services__carousel-item-icon-absolute">
-                            <img src="src/assets/icons/Headset.svg" alt="Ícone de atendimento">
+                            <i class="ph ph-headset" aria-hidden="true"></i>
                         </div>
                         <main class="services__carousel-container">
                             <h2 class="services__carousel-title">
@@ -208,65 +227,67 @@
                             </h2>
                             <ul>
                                 <li>
-                                    <img src="src/assets/icons/samu.svg" alt="">
-                                    <span>Serviço Emergêncial</span>
+                                    <i class="ph ph-siren" aria-hidden="true"></i>
+                                    <span>Atendimento emergencial</span>
                                 </li>
                                 <li>
-                                    <img src="src/assets/icons/samu.svg" alt="">
-                                    <span>Serviços Agendados</span>
+                                    <i class="ph ph-calendar-check" aria-hidden="true"></i>
+                                    <span>Entregas agendadas</span>
                                 </li>
                             </ul>
-                            <button class="button__cta">
+                            <a class="button__cta" href="https://wa.me/5511983675067" target="_blank"
+                                rel="noopener noreferrer" aria-label="Chamar no WhatsApp: 11 98367-5067">
                                 <span>
                                     Solicitar esse serviço
                                 </span>
                                 <div>
                                     <img src="src/assets/icons/ArrowUpRight.svg" alt="Seta para a direita cima">
                                 </div>
-                            </button>
+                            </a>
                         </main>
                     </li>
                     <li class="splide__slide services__carousel-item">
                         <img src="src/assets/logistica-documental.png" alt="documentos sendo entregues" loading="lazy">
                         <div class="services__carousel-item-icon-absolute">
-                            <img src="src/assets/icons/doc.svg" alt="Ícone de documento">
+                            <i class="ph ph-file-text" aria-hidden="true"></i>
                         </div>
                         <main class="services__carousel-container">
                             <h2 class="services__carousel-title">
-                                Logistica Documental
+                                Logística Documental
                             </h2>
                             <ul>
                                 <li>
-                                    <img src="src/assets/icons/samu.svg" alt="">
-                                    <span>Serviço de Cartórios</span>
+                                    <i class="ph ph-buildings" aria-hidden="true"></i>
+                                    <span>Cartórios</span>
                                 </li>
                                 <li>
-                                    <img src="src/assets/icons/samu.svg" alt="">
-                                    <span>Serviços Bancários</span>
+                                    <i class="ph ph-bank" aria-hidden="true"></i>
+                                    <span>Serviços bancários</span>
                                 </li>
                                 <li>
-                                    <img src="src/assets/icons/samu.svg" alt="">
-                                    <span>Correios e Malotes</span>
+                                    <i class="ph ph-envelope-simple" aria-hidden="true"></i>
+                                    <span>Correios e malotes</span>
                                 </li>
                                 <li>
-                                    <img src="src/assets/icons/samu.svg" alt="">
-                                    <span>Coleta e Assinatura</span>
+                                    <i class="ph ph-signature" aria-hidden="true"></i>
+                                    <span>Coleta e assinatura</span>
                                 </li>
                             </ul>
-                            <button class="button__cta">
+                            <a class="button__cta" href="https://wa.me/5511983675067" target="_blank"
+                                rel="noopener noreferrer" aria-label="Chamar no WhatsApp: 11 98367-5067">
                                 <span>
                                     Solicitar esse serviço
                                 </span>
                                 <div>
                                     <img src="src/assets/icons/ArrowUpRight.svg" alt="Seta para a direita cima">
                                 </div>
-                            </button>
+                            </a>
                         </main>
                     </li>
                     <li class="splide__slide services__carousel-item">
                         <img src="src/assets/varejo.png" alt="imagem relacionada ao varejo" loading="lazy">
                         <div class="services__carousel-item-icon-absolute">
-                            <img src="src/assets/icons/Basket.svg" alt="Ícone de varejo">
+                            <i class="ph ph-shopping-bag" aria-hidden="true"></i>
                         </div>
                         <main class="services__carousel-container">
                             <h2 class="services__carousel-title">
@@ -274,32 +295,33 @@
                             </h2>
                             <ul>
                                 <li>
-                                    <img src="src/assets/icons/samu.svg" alt="">
-                                    <span>Retiradas em Loja</span>
+                                    <i class="ph ph-storefront" aria-hidden="true"></i>
+                                    <span>Retiradas em loja</span>
                                 </li>
                                 <li>
-                                    <img src="src/assets/icons/samu.svg" alt="">
+                                    <i class="ph ph-gift" aria-hidden="true"></i>
                                     <span>Brindes e convites</span>
                                 </li>
                                 <li>
-                                    <img src="src/assets/icons/samu.svg" alt="">
+                                    <i class="ph ph-devices" aria-hidden="true"></i>
                                     <span>Transporte de eletrônicos</span>
                                 </li>
                             </ul>
-                            <button class="button__cta">
+                            <a class="button__cta" href="https://wa.me/5511983675067" target="_blank"
+                                rel="noopener noreferrer" aria-label="Chamar no WhatsApp: 11 98367-5067">
                                 <span>
                                     Solicitar esse serviço
                                 </span>
                                 <div>
                                     <img src="src/assets/icons/ArrowUpRight.svg" alt="Seta para a direita cima">
                                 </div>
-                            </button>
+                            </a>
                         </main>
                     </li>
                     <li class="splide__slide services__carousel-item">
-                        <img src="src/assets/varejo.png" alt="imagem relacionada ao varejo" loading="lazy">
+                        <img src="src/assets/farmacia.png" alt="imagem relacionada ao varejo" loading="lazy">
                         <div class="services__carousel-item-icon-absolute">
-                            <img src="src/assets/icons/FirstAidKit.svg" alt="Ícone de saúde">
+                            <i class="ph ph-first-aid" aria-hidden="true"></i>
                         </div>
                         <main class="services__carousel-container">
                             <h2 class="services__carousel-title">
@@ -307,28 +329,29 @@
                             </h2>
                             <ul>
                                 <li>
-                                    <img src="src/assets/icons/samu.svg" alt="">
-                                    <span>Linha Farmacêutica</span>
+                                    <i class="ph ph-pill" aria-hidden="true"></i>
+                                    <span>Linha farmacêutica</span>
                                 </li>
                                 <li>
-                                    <img src="src/assets/icons/samu.svg" alt="">
-                                    <span>Gestão de exames</span>
+                                    <i class="ph ph-test-tube" aria-hidden="true"></i>
+                                    <span>Exames e documentos</span>
                                 </li>
                             </ul>
-                            <button class="button__cta">
+                            <a class="button__cta" href="https://wa.me/5511983675067" target="_blank"
+                                rel="noopener noreferrer" aria-label="Chamar no WhatsApp: 11 98367-5067">
                                 <span>
                                     Solicitar esse serviço
                                 </span>
                                 <div>
                                     <img src="src/assets/icons/ArrowUpRight.svg" alt="Seta para a direita cima">
                                 </div>
-                            </button>
+                            </a>
                         </main>
                     </li>
                     <li class="splide__slide services__carousel-item">
-                        <img src="src/assets/varejo.png" alt="imagem relacionada ao varejo" loading="lazy">
+                        <img src="src/assets/aeroporto.png" alt="imagem relacionada ao varejo" loading="lazy">
                         <div class="services__carousel-item-icon-absolute">
-                            <img src="src/assets/icons/Key.svg" alt="Ícone de segurança">
+                            <i class="ph ph-shield-check" aria-hidden="true"></i>
                         </div>
                         <main class="services__carousel-container">
                             <h2 class="services__carousel-title">
@@ -336,22 +359,23 @@
                             </h2>
                             <ul>
                                 <li>
-                                    <img src="src/assets/icons/samu.svg" alt="">
-                                    <span>Logística Aeroportuária</span>
+                                    <i class="ph ph-airplane-takeoff" aria-hidden="true"></i>
+                                    <span>Logística aeroportuária</span>
                                 </li>
                                 <li>
-                                    <img src="src/assets/icons/samu.svg" alt="">
+                                    <i class="ph ph-key" aria-hidden="true"></i>
                                     <span>Objetos pessoais</span>
                                 </li>
                             </ul>
-                            <button class="button__cta">
+                            <a class="button__cta" href="https://wa.me/5511983675067" target="_blank"
+                                rel="noopener noreferrer" aria-label="Chamar no WhatsApp: 11 98367-5067">
                                 <span>
                                     Solicitar esse serviço
                                 </span>
                                 <div>
                                     <img src="src/assets/icons/ArrowUpRight.svg" alt="Seta para a direita cima">
                                 </div>
-                            </button>
+                            </a>
                         </main>
                     </li>
                 </ul>
@@ -359,14 +383,14 @@
         </section>
         <aside class="services__controls" data-aos="fade-up" data-aos-delay="150">
             <p>
-                Sua empresa de entregas, R Soluções Transporte Express
+                Quer agilizar suas entregas hoje? Chama no WhatsApp.
             </p>
             <div class="services__controls-div">
                 <button class="splide__arrow--prev" type="button" aria-label="Serviço anterior">
-                    <img src="src/assets/icons/seta-esquerda.png" alt="prev">
+                    <img src="src/assets/icons/seta-esquerda.png" alt="Anterior">
                 </button>
                 <button class="splide__arrow--next" type="button" aria-label="Próximo serviço">
-                    <img src="src/assets/icons/seta-esquerda.png" alt="next">
+                    <img src="src/assets/icons/seta-esquerda.png" alt="Próximo">
                 </button>
             </div>
         </aside>
@@ -374,11 +398,11 @@
     <section class="process__content" id="process">
         <article class="process__article" data-aos="fade-up">
             <h1 class="process__article-title">
-                Entenda todo o processo que temos com o seu produto
+                Um processo simples, do jeito que tem que ser
             </h1>
             <p class="process__article-description">
-                Desde a coleta até a entrega, cada etapa do nosso processo é cuidadosamente planejada para garantir que
-                seu produto chegue ao destino final em perfeitas condições e dentro do prazo estipulado.
+                Da coleta à entrega, cada etapa é pensada pra reduzir riscos e ganhar tempo. Você acompanha tudo com
+                clareza e consegue tomar decisão rápido.
             </p>
         </article>
         <main class="process__carousel">
@@ -391,8 +415,7 @@
                 </div>
                 <aside class="process__carousel-item-content">
                     <h2>Coleta</h2>
-                    <p>Agendamos a coleta do seu produto no local e horário mais conveniente para você, garantindo
-                        praticidade e flexibilidade.</p>
+                    <p>A gente combina o melhor ponto e horário e já coloca sua entrega em movimento.</p>
                 </aside>
             </div>
             <div class="process__carousel-item" data-aos="fade-up" data-aos-delay="80">
@@ -404,8 +427,7 @@
                 </div>
                 <aside class="process__carousel-item-content">
                     <h2>Acomodação</h2>
-                    <p>Organizar e proteger seu produto durante o transporte para garantir que ele chegue em perfeitas
-                        condições.</p>
+                    <p>Seu produto vai bem protegido e organizado pra chegar inteiro, do jeito que saiu.</p>
                 </aside>
             </div>
             <div class="process__carousel-item" data-aos="fade-up" data-aos-delay="160">
@@ -417,7 +439,7 @@
                 </div>
                 <aside class="process__carousel-item-content">
                     <h2>Deslocamento</h2>
-                    <p>Seguir a rota do GPS com agilidade e segurança até o destino final.</p>
+                    <p>Rota planejada e execução rápida pra sua entrega chegar sem atrasos desnecessários.</p>
                 </aside>
             </div>
             <div class="process__carousel-item" data-aos="fade-up" data-aos-delay="240">
@@ -429,14 +451,14 @@
                 </div>
                 <aside class="process__carousel-item-content">
                     <h2>Finalização</h2>
-                    <p>Concluir o processo garantindo que seu produto seja entregue com qualidade e satisfação.</p>
+                    <p>Entrega concluída e confirmação feita. Pronto: você volta pro que importa.</p>
                 </aside>
             </div>
         </main>
     </section>
     <section class="transport__content" id="transport">
         <h1 class="transport__title" data-aos="fade-up">
-            Conheça os meios de transporte que você pode solicitar na sua entrega
+            Escolha o transporte ideal pra sua entrega
         </h1>
         <section class="splide transport__carousel transport__carousel-splide" aria-label="Meios de transporte"
             data-aos="fade-up" data-aos-delay="100">
@@ -446,65 +468,64 @@
                         <img src="src/assets/moto.png" alt="moto de entrega" loading="lazy">
                         <aside class="transport__carousel-item-content">
                             <h2>Moto</h2>
-                            <p>Ideal para entregas rápidas e ágeis em áreas urbanas, garantindo eficiência no trânsito.
-                            </p>
-                            <button class="button__cta">
+                            <p>Perfeita pra documentos, pequenos volumes e entregas rápidas na cidade.</p>
+                            <a class="button__cta" href="https://wa.me/5511983675067" target="_blank"
+                                rel="noopener noreferrer" aria-label="Chamar no WhatsApp: 11 98367-5067">
                                 <span>
                                     Solicitar esse serviço
                                 </span>
                                 <div>
                                     <img src="src/assets/icons/ArrowUpRight.svg" alt="Seta para a direita cima">
                                 </div>
-                            </button>
+                            </a>
                         </aside>
                     </li>
                     <li class="splide__slide transport__carousel-item">
                         <img src="src/assets/carro.png" alt="carro de entrega" loading="lazy">
                         <aside class="transport__carousel-item-content">
                             <h2>Carro</h2>
-                            <p>Perfeito para entregas que exigem maior capacidade de carga e proteção do produto durante
-                                o
-                                transporte.</p>
-                            <button class="button__cta">
+                            <p>Mais espaço e mais proteção pra volumes médios e entregas com cuidado extra.</p>
+                            <a class="button__cta" href="https://wa.me/5511983675067" target="_blank"
+                                rel="noopener noreferrer" aria-label="Chamar no WhatsApp: 11 98367-5067">
                                 <span>
                                     Solicitar esse serviço
                                 </span>
                                 <div>
                                     <img src="src/assets/icons/ArrowUpRight.svg" alt="Seta para a direita cima">
                                 </div>
-                            </button>
+                            </a>
                         </aside>
                     </li>
                     <li class="splide__slide transport__carousel-item">
                         <img src="src/assets/fiorino.png" alt="fiorino de entrega" loading="lazy">
                         <aside class="transport__carousel-item-content">
                             <h2>Fiorino</h2>
-                            <p>Ideal para entregas que requerem maior volume e proteção extra durante o transporte.</p>
-                            <button class="button__cta">
+                            <p>Ótima pra volumes maiores, com segurança e agilidade no dia a dia.</p>
+                            <a class="button__cta" href="https://wa.me/5511983675067" target="_blank"
+                                rel="noopener noreferrer" aria-label="Chamar no WhatsApp: 11 98367-5067">
                                 <span>
                                     Solicitar esse serviço
                                 </span>
                                 <div>
                                     <img src="src/assets/icons/ArrowUpRight.svg" alt="Seta para a direita cima">
                                 </div>
-                            </button>
+                            </a>
                         </aside>
                     </li>
                     <li class="splide__slide transport__carousel-item">
                         <img src="src/assets/caminhao.png" alt="caminhao de entrega" loading="lazy">
                         <aside class="transport__carousel-item-content">
                             <h2>Caminhão Baú</h2>
-                            <p>Perfeito para entregas de grandes volumes que necessitam de proteção e segurança durante
-                                o
-                                transporte.</p>
-                            <button class="button__cta">
+                            <p>Pra grandes volumes e cargas que precisam de transporte fechado e protegido.</p>
+                            <a class="button__cta" href="https://wa.me/5511983675067" target="_blank"
+                                rel="noopener noreferrer" aria-label="Chamar no WhatsApp: 11 98367-5067">
                                 <span>
                                     Solicitar esse serviço
                                 </span>
                                 <div>
                                     <img src="src/assets/icons/ArrowUpRight.svg" alt="Seta para a direita cima">
                                 </div>
-                            </button>
+                            </a>
                         </aside>
                     </li>
                 </ul>
@@ -534,22 +555,23 @@
             </div>
 
             <h1 class="security__title">
-                Sua entrega está na mão da
-                pessoa certa!
+                Sua entrega em boas mãos,
+                do começo ao fim.
             </h1>
             <p class="security__description">
-                Sua encomenda é monitorada em tempo real pela nossa central de operações. Nossa frota é 100% rastreada
-                internamente, seguindo rotas exclusivas e sem desvios.
+                A gente trabalha com organização e atenção em cada detalhe: coleta, acomodação e entrega com cuidado.
+                Você chama no WhatsApp e recebe atendimento direto, sem complicação.
             </p>
 
-            <button class="button__cta" type="button">
+            <a class="button__cta" href="https://wa.me/5511983675067" target="_blank" rel="noopener noreferrer"
+                aria-label="Chamar no WhatsApp: 11 98367-5067">
                 <span>
                     Solicitar uma entrega
                 </span>
                 <div>
                     <img src="src/assets/icons/ArrowUpRight.svg" alt="Seta para a direita cima">
                 </div>
-            </button>
+            </a>
         </article>
 
         <div class="security__phone security__phone--right" aria-hidden="true">
@@ -562,7 +584,7 @@
                 Quem conhece,<br>
                 confia com os olhos fechados!
             </h1>
-            <div class="testimonials__rating" aria-label="Avaliação média 4.96 de 5">
+            <div class="testimonials__rating" aria-label="Avaliação média 4,9 de 5">
                 <ul class="testimonials__rating-stars" aria-hidden="true">
                     <li><img src="src/assets/icons/star.svg" alt=""></li>
                     <li><img src="src/assets/icons/star.svg" alt=""></li>
@@ -571,7 +593,7 @@
                     <li><img src="src/assets/icons/star.svg" alt=""></li>
                 </ul>
                 <span class="testimonials__rating-text">
-                    <strong>4.96</strong>/5 <span>de 412 Avaliações</span>
+                    <strong>4,9</strong>/5 <span>em +400 avaliações</span>
                 </span>
             </div>
         </header>
@@ -616,135 +638,120 @@
                         <li class="splide__slide testimonials__carousel-item">
                             <article class="testimonials__carousel-item-article">
                                 <p>
-                                    Excelente no atendimento muito educado, pontuais e de extrema confiança eu indico
-                                    para todas
-                                    empresas que eu presto serviço como motorista executivo e quando precisa de motoboy
-                                    ou logística
-                                    eu indico eles. Segurança, pontualidade e muita educação no atendimento ao cliente.
+                                    Atendimento rápido e sem enrolação. Pedi coleta no mesmo dia e deu tudo certo.
+                                    Comunicação clara e entrega sem susto.
                                 </p>
                                 <ul>
-                                    <li><img src="src/assets/icons/star.svg" alt="icone de estrela"></li>
-                                    <li><img src="src/assets/icons/star.svg" alt="icone de estrela"></li>
-                                    <li><img src="src/assets/icons/star.svg" alt="icone de estrela"></li>
-                                    <li><img src="src/assets/icons/star.svg" alt="icone de estrela"></li>
-                                    <li><img src="src/assets/icons/star.svg" alt="icone de estrela"></li>
+                                    <li><img src="src/assets/icons/star.svg" alt="" aria-hidden="true"></li>
+                                    <li><img src="src/assets/icons/star.svg" alt="" aria-hidden="true"></li>
+                                    <li><img src="src/assets/icons/star.svg" alt="" aria-hidden="true"></li>
+                                    <li><img src="src/assets/icons/star.svg" alt="" aria-hidden="true"></li>
+                                    <li><img src="src/assets/icons/star.svg" alt="" aria-hidden="true"></li>
                                 </ul>
                             </article>
                             <div class="testimonials__carousel-item-profile">
                                 <div class="testimonials__carousel-item-profile-image">
-                                    <span>JP</span>
+                                    <span>MR</span>
                                 </div>
                                 <div class="testimonials__carousel-item-profile-info">
-                                    <h3>JP Resenha de Aplicativo</h3>
-                                    <span>6 meses atrás</span>
+                                    <h3>Mariana Ribeiro</h3>
+                                    <span>3 semanas atrás</span>
                                 </div>
                             </div>
                         </li>
                         <li class="splide__slide testimonials__carousel-item">
                             <article class="testimonials__carousel-item-article">
                                 <p>
-                                    Excelente no atendimento muito educado, pontuais e de extrema confiança eu indico
-                                    para todas
-                                    empresas que eu presto serviço como motorista executivo e quando precisa de motoboy
-                                    ou logística
-                                    eu indico eles. Segurança, pontualidade e muita educação no atendimento ao cliente.
+                                    A gente usa no trabalho pra entregas urgentes. Chega certinho, bem embalado e com
+                                    confirmação no final. Vira parceria.
                                 </p>
                                 <ul>
-                                    <li><img src="src/assets/icons/star.svg" alt="icone de estrela"></li>
-                                    <li><img src="src/assets/icons/star.svg" alt="icone de estrela"></li>
-                                    <li><img src="src/assets/icons/star.svg" alt="icone de estrela"></li>
-                                    <li><img src="src/assets/icons/star.svg" alt="icone de estrela"></li>
-                                    <li><img src="src/assets/icons/star.svg" alt="icone de estrela"></li>
+                                    <li><img src="src/assets/icons/star.svg" alt="" aria-hidden="true"></li>
+                                    <li><img src="src/assets/icons/star.svg" alt="" aria-hidden="true"></li>
+                                    <li><img src="src/assets/icons/star.svg" alt="" aria-hidden="true"></li>
+                                    <li><img src="src/assets/icons/star.svg" alt="" aria-hidden="true"></li>
+                                    <li><img src="src/assets/icons/star.svg" alt="" aria-hidden="true"></li>
                                 </ul>
                             </article>
                             <div class="testimonials__carousel-item-profile">
                                 <div class="testimonials__carousel-item-profile-image">
-                                    <span>JP</span>
+                                    <span>LC</span>
                                 </div>
                                 <div class="testimonials__carousel-item-profile-info">
-                                    <h3>JP Resenha de Aplicativo</h3>
-                                    <span>6 meses atrás</span>
+                                    <h3>Lucas Carvalho</h3>
+                                    <span>1 mês atrás</span>
                                 </div>
                             </div>
                         </li>
                         <li class="splide__slide testimonials__carousel-item">
                             <article class="testimonials__carousel-item-article">
                                 <p>
-                                    Excelente no atendimento muito educado, pontuais e de extrema confiança eu indico
-                                    para todas
-                                    empresas que eu presto serviço como motorista executivo e quando precisa de motoboy
-                                    ou logística
-                                    eu indico eles. Segurança, pontualidade e muita educação no atendimento ao cliente.
+                                    Precisei buscar documento em cartório e entregar em outra ponta da cidade.
+                                    Resolveram tudo no prazo e com um atendimento bem humano.
                                 </p>
                                 <ul>
-                                    <li><img src="src/assets/icons/star.svg" alt="icone de estrela"></li>
-                                    <li><img src="src/assets/icons/star.svg" alt="icone de estrela"></li>
-                                    <li><img src="src/assets/icons/star.svg" alt="icone de estrela"></li>
-                                    <li><img src="src/assets/icons/star.svg" alt="icone de estrela"></li>
-                                    <li><img src="src/assets/icons/star.svg" alt="icone de estrela"></li>
+                                    <li><img src="src/assets/icons/star.svg" alt="" aria-hidden="true"></li>
+                                    <li><img src="src/assets/icons/star.svg" alt="" aria-hidden="true"></li>
+                                    <li><img src="src/assets/icons/star.svg" alt="" aria-hidden="true"></li>
+                                    <li><img src="src/assets/icons/star.svg" alt="" aria-hidden="true"></li>
+                                    <li><img src="src/assets/icons/star.svg" alt="" aria-hidden="true"></li>
                                 </ul>
                             </article>
                             <div class="testimonials__carousel-item-profile">
                                 <div class="testimonials__carousel-item-profile-image">
-                                    <span>JP</span>
+                                    <span>PA</span>
                                 </div>
                                 <div class="testimonials__carousel-item-profile-info">
-                                    <h3>JP Resenha de Aplicativo</h3>
-                                    <span>6 meses atrás</span>
+                                    <h3>Patrícia Almeida</h3>
+                                    <span>2 meses atrás</span>
                                 </div>
                             </div>
                         </li>
                         <li class="splide__slide testimonials__carousel-item">
                             <article class="testimonials__carousel-item-article">
                                 <p>
-                                    Excelente no atendimento muito educado, pontuais e de extrema confiança eu indico
-                                    para todas
-                                    empresas que eu presto serviço como motorista executivo e quando precisa de motoboy
-                                    ou logística
-                                    eu indico eles. Segurança, pontualidade e muita educação no atendimento ao cliente.
+                                    Já testei outros e sempre tinha atraso. Aqui é diferente: combinado é combinado.
+                                    Quando preciso de rapidez, eu chamo eles.
                                 </p>
                                 <ul>
-                                    <li><img src="src/assets/icons/star.svg" alt="icone de estrela"></li>
-                                    <li><img src="src/assets/icons/star.svg" alt="icone de estrela"></li>
-                                    <li><img src="src/assets/icons/star.svg" alt="icone de estrela"></li>
-                                    <li><img src="src/assets/icons/star.svg" alt="icone de estrela"></li>
-                                    <li><img src="src/assets/icons/star.svg" alt="icone de estrela"></li>
+                                    <li><img src="src/assets/icons/star.svg" alt="" aria-hidden="true"></li>
+                                    <li><img src="src/assets/icons/star.svg" alt="" aria-hidden="true"></li>
+                                    <li><img src="src/assets/icons/star.svg" alt="" aria-hidden="true"></li>
+                                    <li><img src="src/assets/icons/star.svg" alt="" aria-hidden="true"></li>
+                                    <li><img src="src/assets/icons/star.svg" alt="" aria-hidden="true"></li>
                                 </ul>
                             </article>
                             <div class="testimonials__carousel-item-profile">
                                 <div class="testimonials__carousel-item-profile-image">
-                                    <span>JP</span>
+                                    <span>RF</span>
                                 </div>
                                 <div class="testimonials__carousel-item-profile-info">
-                                    <h3>JP Resenha de Aplicativo</h3>
-                                    <span>6 meses atrás</span>
+                                    <h3>Rafael Ferreira</h3>
+                                    <span>4 meses atrás</span>
                                 </div>
                             </div>
                         </li>
                         <li class="splide__slide testimonials__carousel-item">
                             <article class="testimonials__carousel-item-article">
                                 <p>
-                                    Excelente no atendimento muito educado, pontuais e de extrema confiança eu indico
-                                    para todas
-                                    empresas que eu presto serviço como motorista executivo e quando precisa de motoboy
-                                    ou logística
-                                    eu indico eles. Segurança, pontualidade e muita educação no atendimento ao cliente.
+                                    Serviço bem organizado. Pedi retirada em loja e entrega pro cliente final.
+                                    Facilita demais a operação do dia a dia.
                                 </p>
                                 <ul>
-                                    <li><img src="src/assets/icons/star.svg" alt="icone de estrela"></li>
-                                    <li><img src="src/assets/icons/star.svg" alt="icone de estrela"></li>
-                                    <li><img src="src/assets/icons/star.svg" alt="icone de estrela"></li>
-                                    <li><img src="src/assets/icons/star.svg" alt="icone de estrela"></li>
-                                    <li><img src="src/assets/icons/star.svg" alt="icone de estrela"></li>
+                                    <li><img src="src/assets/icons/star.svg" alt="" aria-hidden="true"></li>
+                                    <li><img src="src/assets/icons/star.svg" alt="" aria-hidden="true"></li>
+                                    <li><img src="src/assets/icons/star.svg" alt="" aria-hidden="true"></li>
+                                    <li><img src="src/assets/icons/star.svg" alt="" aria-hidden="true"></li>
+                                    <li><img src="src/assets/icons/star.svg" alt="" aria-hidden="true"></li>
                                 </ul>
                             </article>
                             <div class="testimonials__carousel-item-profile">
                                 <div class="testimonials__carousel-item-profile-image">
-                                    <span>JP</span>
+                                    <span>BS</span>
                                 </div>
                                 <div class="testimonials__carousel-item-profile-info">
-                                    <h3>JP Resenha de Aplicativo</h3>
-                                    <span>6 meses atrás</span>
+                                    <h3>Bruna Santos</h3>
+                                    <span>5 meses atrás</span>
                                 </div>
                             </div>
                         </li>
@@ -754,21 +761,22 @@
         </div>
     </section>
     <footer class="footer__content">
-        <article class="footer__article" data-aos="fade-up">
+        <article class="footer__article">
             <h1 class="footer__article-title">
-                Peça a sua entrega agora, a nossa
-                equipe espera seu contato!
+                Peça sua entrega agora.
+                A gente resolve no WhatsApp.
             </h1>
-            <button class="button__cta" type="button">
+            <a class="button__cta" href="https://wa.me/5511983675067" target="_blank" rel="noopener noreferrer"
+                aria-label="Chamar no WhatsApp: 11 98367-5067">
                 <span>
                     Solicitar uma entrega
                 </span>
                 <div>
                     <img src="src/assets/icons/ArrowUpRight.svg" alt="Seta para a direita cima">
                 </div>
-            </button>
+            </a>
         </article>
-        <div class="footer__policies" data-aos="fade-up" data-aos-delay="100">
+        <div class="footer__policies">
             <span class="footer__copyright">© 2026 R Transportes Express. Todos os direitos reservados.</span>
             <a class="footer__developer"
                 href="https://www.alephsramosdev.com.br?utm_source=r-transportes-express&utm_medium=footer&utm_campaign=freelancer"
@@ -783,6 +791,7 @@
 
     <script defer src="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/js/splide.min.js"></script>
     <script defer src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+    <script defer src="src/scripts/page-loader.js"></script>
     <script defer src="src/scripts/aos-init.js"></script>
     <script defer src="src/scripts/header-menu.js"></script>
     <script defer src="src/scripts/hero-prize.js"></script>

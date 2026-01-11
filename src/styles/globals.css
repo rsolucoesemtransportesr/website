@@ -18,6 +18,7 @@
 html {
     font-family: "DM Sans", system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
     letter-spacing: -0.04em;
+    scroll-behavior: smooth;
 }
 
 html,
@@ -30,5 +31,49 @@ body {
     html,
     body {
         overflow-x: clip;
+    }
+}
+
+.page-loader {
+    position: fixed;
+    inset: 0;
+    z-index: 9999;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--color-white);
+    transform: translateY(0);
+    will-change: transform;
+}
+
+.page-loader__logo {
+    width: 180px;
+    height: auto;
+}
+
+body.is-page-loading .page-loader {
+    animation: page-loader-exit 1000ms ease-in-out forwards;
+}
+
+@keyframes page-loader-exit {
+
+    0%,
+    60% {
+        transform: translateY(0);
+    }
+
+    100% {
+        transform: translateY(-110%);
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    html {
+        scroll-behavior: auto;
+    }
+
+    body.is-page-loading .page-loader {
+        animation: none;
+        transform: translateY(-110%);
     }
 }

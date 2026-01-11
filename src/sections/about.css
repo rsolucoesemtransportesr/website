@@ -13,6 +13,19 @@
     @media (max-width: 768px) {
         gap: 32px;
         padding: 24px;
+
+        /* Mobile: show image before the text (without moving the range carousel). */
+        & .about__container-image {
+            order: -1;
+        }
+
+        & .about__article {
+            order: 0;
+        }
+
+        & .about__range {
+            order: 1;
+        }
     }
 
     & .about__article {
@@ -80,7 +93,7 @@
             left: 50%;
             transform: translateX(-50%);
             border-radius: 12px;
-            
+
             @media (max-width: 768px) {
                 flex-direction: column;
                 gap: 6px;

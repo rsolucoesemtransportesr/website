@@ -38,7 +38,7 @@
             background: transparent;
             text-align: left;
             cursor: pointer;
-            margin-bottom: 12px ;
+            margin-bottom: 12px;
 
             & .hero__promo-icon {
                 border: 1px solid #C2070B20;
@@ -68,6 +68,8 @@
                     font-weight: 500;
                     line-height: 1;
                     font-size: 20px;
+                    transform: translateY(0);
+                    opacity: 1;
                     transition: opacity 220ms ease, transform 220ms ease;
                 }
 
@@ -76,18 +78,27 @@
                     line-height: 1;
                     font-size: 16px;
                     color: var(--color-dark-gray);
+                    transform: translateY(0);
+                    opacity: 1;
                     transition: opacity 220ms ease, transform 220ms ease;
                 }
             }
 
             &.is-prize-revealed {
+                & .hero__promo-icon {
+                    animation: hero-prize-pop 520ms cubic-bezier(0.2, 0.9, 0.2, 1);
+                }
+
                 & .hero__promo-container>h4 {
                     color: var(--color-red);
+                    animation: hero-prize-text-in 360ms ease both;
                 }
 
                 & .hero__promo-container .hero__promo-status {
                     color: var(--color-black);
                     transform: translateY(0);
+                    animation: hero-prize-text-in 360ms ease both;
+                    animation-delay: 60ms;
                 }
             }
         }
@@ -155,6 +166,117 @@
     }
 }
 
+@keyframes hero-prize-pop {
+    0% {
+        transform: translateY(0) scale(1);
+    }
+
+    35% {
+        transform: translateY(-2px) scale(1.08);
+    }
+
+    100% {
+        transform: translateY(0) scale(1);
+    }
+}
+
+@keyframes hero-prize-text-in {
+    0% {
+        opacity: 0;
+        transform: translateY(8px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.prize-banner {
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    z-index: 500;
+    background-color: var(--color-white);
+    border-bottom: 1px solid var(--color-light-gray);
+    padding: 12px 42px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+    flex-wrap: nowrap;
+    transform: translateY(-110%);
+    opacity: 0;
+    transition: transform 320ms cubic-bezier(0.2, 0.8, 0.2, 1), opacity 220ms ease;
+    box-sizing: border-box;
+}
+
+.prize-banner.is-visible {
+    transform: translateY(0);
+    opacity: 1;
+}
+
+.prize-banner__text {
+    margin: 0;
+    font-size: 16px;
+    font-weight: 500;
+    color: var(--color-black);
+    width: 70%;
+    line-height: 1.2;
+}
+
+.prize-banner__cta {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    width: 30%;
+}
+
+.prize-banner__cta>span {
+    font-size: 14px;
+    padding: 8px 12px;
+    font-weight: 500;
+    color: var(--color-white);
+    white-space: nowrap;
+}
+
+.prize-banner__cta>div {
+    padding: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    display: none;
+}
+
+@media (max-width: 768px) {
+    .prize-banner {
+        padding: 10px 24px;
+        gap: 12px;
+        align-items: center;
+    }
+
+    .prize-banner__text {
+        font-size: 14px;
+        flex: initial;
+    }
+
+    .prize-banner__cta {
+        flex: initial;
+        justify-content: flex-end;
+    }
+
+    .prize-banner__cta.button__cta {
+        width: 100%;
+        justify-content: flex-end;
+    }
+
+    .prize-banner__cta>span {
+        white-space: nowrap;
+    }
+
+}
+
 @media (prefers-reduced-motion: reduce) {
     .hero__content {
         & .hero__promo {
@@ -164,6 +286,19 @@
             & .hero__promo-container>h4 {
                 transition: none;
             }
+
+            &.is-prize-revealed {
+
+                & .hero__promo-icon,
+                & .hero__promo-container>h4,
+                & .hero__promo-container .hero__promo-status {
+                    animation: none;
+                }
+            }
         }
+    }
+
+    .prize-banner {
+        transition: none;
     }
 }
