@@ -40,8 +40,14 @@
 
     <link rel="stylesheet" href="src/styles/globals.css">
 
+    <!-- Phosphor Icons (mobile menu) -->
+    <link rel="stylesheet" href="https://unpkg.com/@phosphor-icons/web@2.1.1/src/regular/style.css">
+
     <!-- Splide (carrosséis) -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide.min.css">
+
+    <!-- AOS (Animate On Scroll) -->
+    <link rel="stylesheet" href="https://unpkg.com/aos@2.3.4/dist/aos.css">
 
     <!-- Structured data (SEO) -->
     <script type="application/ld+json">
@@ -62,40 +68,53 @@
 </head>
 
 <body>
-    <header class="header__content">
-        <a href="/" class="header__logo-link">
+    <header class="header__content" data-header>
+        <a href="/" class="header__logo-link" aria-label="Ir para o início">
             <img src="src/assets/brand/logo.png" alt="Logo da R Transportes Express" class="header__logo-image">
         </a>
-        <nav class="header__nav">
-            <ul class="header__nav-list">
-                <li class="header__nav-item"><a href="#about" class="header__nav-link">Sobre Nós</a></li>
-                <li class="header__nav-item"><a href="#services" class="header__nav-link">Serviços</a></li>
-                <li class="header__nav-item"><a href="#process" class="header__nav-link">Processo</a></li>
-                <li class="header__nav-item"><a href="#testimonials" class="header__nav-link">Depoimentos</a></li>
-                <li class="header__nav-item"><a href="#security" class="header__nav-link">Segurança</a></li>
-            </ul>
-        </nav>
-        <button class="button__cta">
-            <span>
-                Solicitar uma entrega
+
+        <button class="header__menu-toggle" type="button" aria-controls="header-drawer" aria-expanded="false"
+            data-header-toggle>
+            <span class="header__menu-toggle-icon" aria-hidden="true">
+                <i class="ph ph-list" aria-hidden="true"></i>
+                <i class="ph ph-x" aria-hidden="true"></i>
             </span>
-            <div>
-                <img src="src/assets/icons/ArrowUpRight.svg" alt="Seta para a direita cima">
-            </div>
+            <span class="header__sr-only">Abrir menu</span>
         </button>
+
+        <div class="header__drawer" id="header-drawer" data-header-drawer>
+            <nav class="header__nav" aria-label="Navegação principal">
+                <ul class="header__nav-list">
+                    <li class="header__nav-item"><a href="#about" class="header__nav-link">Sobre Nós</a></li>
+                    <li class="header__nav-item"><a href="#services" class="header__nav-link">Serviços</a></li>
+                    <li class="header__nav-item"><a href="#process" class="header__nav-link">Processo</a></li>
+                    <li class="header__nav-item"><a href="#testimonials" class="header__nav-link">Depoimentos</a></li>
+                    <li class="header__nav-item"><a href="#security" class="header__nav-link">Segurança</a></li>
+                </ul>
+            </nav>
+
+            <button class="button__cta header__cta" type="button">
+                <span>
+                    Solicitar uma entrega
+                </span>
+                <div>
+                    <img src="src/assets/icons/ArrowUpRight.svg" alt="Seta para a direita cima">
+                </div>
+            </button>
+        </div>
     </header>
     <section class="hero__content">
         <article class="hero__article">
-            <div class="hero__promo">
+            <button class="hero__promo" type="button" data-hero-prize aria-label="Clique e ganhe um prêmio">
                 <div class="hero__promo-icon">
                     <img src="src/assets/icons/gift-light.svg" alt="Ícone de promoção">
                 </div>
                 <main class="hero__promo-container">
-                    <h4>Clique e ganhe um prêmio!</h4>
-                    <p>Bloqueado</p>
+                    <h4 data-hero-prize-title>Clique e ganhe um prêmio!</h4>
+                    <p class="hero__promo-status" data-hero-prize-subtitle>Bloqueado</p>
                 </main>
-            </div>
-            <main class="hero__texts">
+            </button>
+            <main class="hero__texts" data-aos="fade-up">
                 <span class="hero__texts-span">
                     Entregas Rápidas e Seguras
                 </span>
@@ -118,12 +137,12 @@
                 </button>
             </main>
         </article>
-        <div class="hero__image-container">
+        <div class="hero__image-container" data-aos="fade-up" data-aos-delay="100">
             <img src="src/assets/hero-image.png" alt="Imagem de um entregador com uma caixa na mão">
         </div>
     </section>
     <section class="about__content" id="about">
-        <article class="about__article">
+        <article class="about__article" data-aos="fade-up">
             <h1 class="about__article-title">
                 Conheça a R Soluções Express, a sua entrega na melhor mão possível
             </h1>
@@ -132,7 +151,7 @@
                 segura e sem riscos
             </p>
         </article>
-        <div class="about__container-image">
+        <div class="about__container-image" data-aos="fade-up" data-aos-delay="100">
             <img src="src/assets/about-image.png" alt="Imagem de um entregador com uma caixa na mão">
             <div class="rating__container-absolute">
                 <ul>
@@ -145,7 +164,8 @@
                 <span>4.96/5 Avaliação</span>
             </div>
         </div>
-        <section class="splide about__range about__range-splide" aria-label="Números e resultados">
+        <section class="splide about__range about__range-splide" aria-label="Números e resultados" data-aos="fade-up"
+            data-aos-delay="150">
             <div class="splide__track">
                 <ul class="splide__list">
                     <li class="splide__slide about__range-item">
@@ -169,10 +189,11 @@
         </section>
     </section>
     <section class="services__content" id="services">
-        <h1 class="services__title">
+        <h1 class="services__title" data-aos="fade-up">
             Conheça todos os nossos serviços de entrega para você
         </h1>
-        <section class="splide services__carousel services__carousel-splide" aria-label="Carrossel de serviços">
+        <section class="splide services__carousel services__carousel-splide" aria-label="Carrossel de serviços"
+            data-aos="fade-up" data-aos-delay="100">
             <div class="splide__track">
                 <ul class="splide__list">
                     <li class="splide__slide services__carousel-item">
@@ -336,9 +357,9 @@
                 </ul>
             </div>
         </section>
-        <aside class="services__controls">
+        <aside class="services__controls" data-aos="fade-up" data-aos-delay="150">
             <p>
-                Todos os serviços são oferecidos por profissionais super qualificados
+                Sua empresa de entregas, R Soluções Transporte Express
             </p>
             <div class="services__controls-div">
                 <button class="splide__arrow--prev" type="button" aria-label="Serviço anterior">
@@ -351,7 +372,7 @@
         </aside>
     </section>
     <section class="process__content" id="process">
-        <article class="process__article">
+        <article class="process__article" data-aos="fade-up">
             <h1 class="process__article-title">
                 Entenda todo o processo que temos com o seu produto
             </h1>
@@ -361,7 +382,7 @@
             </p>
         </article>
         <main class="process__carousel">
-            <div class="process__carousel-item">
+            <div class="process__carousel-item" data-aos="fade-up" data-aos-delay="0">
                 <div class="process__carousel-item-absolute">
                     <span>1</span>
                 </div>
@@ -374,7 +395,7 @@
                         praticidade e flexibilidade.</p>
                 </aside>
             </div>
-            <div class="process__carousel-item">
+            <div class="process__carousel-item" data-aos="fade-up" data-aos-delay="80">
                 <div class="process__carousel-item-absolute">
                     <span>2</span>
                 </div>
@@ -387,7 +408,7 @@
                         condições.</p>
                 </aside>
             </div>
-            <div class="process__carousel-item">
+            <div class="process__carousel-item" data-aos="fade-up" data-aos-delay="160">
                 <div class="process__carousel-item-absolute">
                     <span>3</span>
                 </div>
@@ -399,7 +420,7 @@
                     <p>Seguir a rota do GPS com agilidade e segurança até o destino final.</p>
                 </aside>
             </div>
-            <div class="process__carousel-item">
+            <div class="process__carousel-item" data-aos="fade-up" data-aos-delay="240">
                 <div class="process__carousel-item-absolute">
                     <span>4</span>
                 </div>
@@ -414,108 +435,114 @@
         </main>
     </section>
     <section class="transport__content" id="transport">
-        <h1 class="transport__title">
+        <h1 class="transport__title" data-aos="fade-up">
             Conheça os meios de transporte que você pode solicitar na sua entrega
         </h1>
-        <main class="transport__carousel">
-            <div class="transport__carousel-item">
-                <img src="src/assets/moto.png" alt="moto de entrega" loading="lazy">
-                <aside class="transport__carousel-item-content">
-                    <h2>Moto</h2>
-                    <p>Ideal para entregas rápidas e ágeis em áreas urbanas, garantindo eficiência no trânsito.</p>
-                    <button>
-                        <span>
-                            Solicitar esse serviço
-                        </span>
-                        <div>
-                            <img src="src/assets/icons/ArrowUpRight.svg" alt="Seta para a direita cima">
-                        </div>
-                    </button>
-                </aside>
+        <section class="splide transport__carousel transport__carousel-splide" aria-label="Meios de transporte"
+            data-aos="fade-up" data-aos-delay="100">
+            <div class="splide__track">
+                <ul class="splide__list">
+                    <li class="splide__slide transport__carousel-item">
+                        <img src="src/assets/moto.png" alt="moto de entrega" loading="lazy">
+                        <aside class="transport__carousel-item-content">
+                            <h2>Moto</h2>
+                            <p>Ideal para entregas rápidas e ágeis em áreas urbanas, garantindo eficiência no trânsito.
+                            </p>
+                            <button class="button__cta">
+                                <span>
+                                    Solicitar esse serviço
+                                </span>
+                                <div>
+                                    <img src="src/assets/icons/ArrowUpRight.svg" alt="Seta para a direita cima">
+                                </div>
+                            </button>
+                        </aside>
+                    </li>
+                    <li class="splide__slide transport__carousel-item">
+                        <img src="src/assets/carro.png" alt="carro de entrega" loading="lazy">
+                        <aside class="transport__carousel-item-content">
+                            <h2>Carro</h2>
+                            <p>Perfeito para entregas que exigem maior capacidade de carga e proteção do produto durante
+                                o
+                                transporte.</p>
+                            <button class="button__cta">
+                                <span>
+                                    Solicitar esse serviço
+                                </span>
+                                <div>
+                                    <img src="src/assets/icons/ArrowUpRight.svg" alt="Seta para a direita cima">
+                                </div>
+                            </button>
+                        </aside>
+                    </li>
+                    <li class="splide__slide transport__carousel-item">
+                        <img src="src/assets/fiorino.png" alt="fiorino de entrega" loading="lazy">
+                        <aside class="transport__carousel-item-content">
+                            <h2>Fiorino</h2>
+                            <p>Ideal para entregas que requerem maior volume e proteção extra durante o transporte.</p>
+                            <button class="button__cta">
+                                <span>
+                                    Solicitar esse serviço
+                                </span>
+                                <div>
+                                    <img src="src/assets/icons/ArrowUpRight.svg" alt="Seta para a direita cima">
+                                </div>
+                            </button>
+                        </aside>
+                    </li>
+                    <li class="splide__slide transport__carousel-item">
+                        <img src="src/assets/caminhao.png" alt="caminhao de entrega" loading="lazy">
+                        <aside class="transport__carousel-item-content">
+                            <h2>Caminhão Baú</h2>
+                            <p>Perfeito para entregas de grandes volumes que necessitam de proteção e segurança durante
+                                o
+                                transporte.</p>
+                            <button class="button__cta">
+                                <span>
+                                    Solicitar esse serviço
+                                </span>
+                                <div>
+                                    <img src="src/assets/icons/ArrowUpRight.svg" alt="Seta para a direita cima">
+                                </div>
+                            </button>
+                        </aside>
+                    </li>
+                </ul>
             </div>
-            <div class="transport__carousel-item">
-                <img src="src/assets/carro.png" alt="carro de entrega" loading="lazy">
-                <aside class="transport__carousel-item-content">
-                    <h2>Carro</h2>
-                    <p>Perfeito para entregas que exigem maior capacidade de carga e proteção do produto durante o
-                        transporte.</p>
-                    <button>
-                        <span>
-                            Solicitar esse serviço
-                        </span>
-                        <div>
-                            <img src="src/assets/icons/ArrowUpRight.svg" alt="Seta para a direita cima">
-                        </div>
-                    </button>
-                </aside>
-            </div>
-            <div class="transport__carousel-item">
-                <img src="src/assets/fiorino.png" alt="fiorino de entrega" loading="lazy">
-                <aside class="transport__carousel-item-content">
-                    <h2>Fiorino</h2>
-                    <p>Ideal para entregas que requerem maior volume e proteção extra durante o transporte.</p>
-                    <button>
-                        <span>
-                            Solicitar esse serviço
-                        </span>
-                        <div>
-                            <img src="src/assets/icons/ArrowUpRight.svg" alt="Seta para a direita cima">
-                        </div>
-                    </button>
-                </aside>
-            </div>
-            <div class="transport__carousel-item">
-                <img src="src/assets/caminhao.png" alt="caminhao de entrega" loading="lazy">
-                <aside class="transport__carousel-item-content">
-                    <h2>Caminhão Baú</h2>
-                    <p>Perfeito para entregas de grandes volumes que necessitam de proteção e segurança durante o
-                        transporte.</p>
-                    <button>
-                        <span>
-                            Solicitar esse serviço
-                        </span>
-                        <div>
-                            <img src="src/assets/icons/ArrowUpRight.svg" alt="Seta para a direita cima">
-                        </div>
-                    </button>
-                </aside>
-            </div>
-        </main>
+        </section>
     </section>
     <section class="security__content" id="security">
-        <div class="security__phone1">
-            <img src="src/assets/phone1.png" alt="Imagem de um telefone" loading="lazy">
+        <div class="security__phone security__phone--left" aria-hidden="true">
+            <img src="src/assets/phone1.png" alt="" loading="lazy">
         </div>
-        <article class="security__article">
-            <div class="security__article-container">
-                <ul>
-                    <li>
-                        <img src="src/assets/icons/MapPinSimpleArea.svg" alt="Ícone de localização">
-                        <h1 class="security__article-title">
-                            Localização em tempo real
-                        </h1>
-                    </li>
-                    <li>
-                        <img src="src/assets/icons/LockKey.svg" alt="Ícone de cadeado">
-                        <h1 class="security__article-title">
-                            Seguro para suas entregas
-                        </h1>
-                    </li>
-                    <li>
-                        <img src="src/assets/icons/GpsFix.svg" alt="Ícone de gps">
-                        <h1 class="security__article-title">
-                            Rastreamento 24 horas
-                        </h1>
-                    </li>
+
+        <article class="security__card" aria-label="Segurança" data-aos="fade-up">
+            <div class="security__badges" aria-label="Destaques">
+                <div class="security__badge security__badge--active">
+                    <img src="src/assets/icons/MapPinSimpleArea.svg" alt="" aria-hidden="true">
+                    <span>Localização em tempo real</span>
+                </div>
+
+                <button class="security__badge security__badge--icon" type="button"
+                    aria-label="Seguro para suas entregas">
+                    <img src="src/assets/icons/LockKey.svg" alt="" aria-hidden="true">
+                </button>
+
+                <button class="security__badge security__badge--icon" type="button" aria-label="Rastreamento 24 horas">
+                    <img src="src/assets/icons/GpsFix.svg" alt="" aria-hidden="true">
+                </button>
             </div>
-            <h1 class="security__article-title">
-                Sua entrega está na mão da pessoa certa!
+
+            <h1 class="security__title">
+                Sua entrega está na mão da
+                pessoa certa!
             </h1>
-            <p class="security__article-description">
+            <p class="security__description">
                 Sua encomenda é monitorada em tempo real pela nossa central de operações. Nossa frota é 100% rastreada
-                internamente, garantindo que os profissionais sigam rotas exclusivas e sem desvios.
+                internamente, seguindo rotas exclusivas e sem desvios.
             </p>
-            <button>
+
+            <button class="button__cta" type="button">
                 <span>
                     Solicitar uma entrega
                 </span>
@@ -524,160 +551,215 @@
                 </div>
             </button>
         </article>
-        <div class="security__phone2">
-            <img src="src/assets/phone2.png" alt="Imagem de um telefone" loading="lazy">
+
+        <div class="security__phone security__phone--right" aria-hidden="true">
+            <img src="src/assets/phone2.png" alt="" loading="lazy">
         </div>
     </section>
     <section class="testimonials__content" id="testimonials">
-        <article class="testimonials__article">
-            <h1 class="testimonials__article-title">
-                Quem conhece, <br>confia com os olhos fechados!
+        <header class="testimonials__header" data-aos="fade-up">
+            <h1 class="testimonials__title">
+                Quem conhece,<br>
+                confia com os olhos fechados!
             </h1>
-            <div class="rating__container-absolute">
-                <ul>
-                    <li><img src="src/assets/icons/star.svg" alt="icone de estrela"></li>
-                    <li><img src="src/assets/icons/star.svg" alt="icone de estrela"></li>
-                    <li><img src="src/assets/icons/star.svg" alt="icone de estrela"></li>
-                    <li><img src="src/assets/icons/star.svg" alt="icone de estrela"></li>
-                    <li><img src="src/assets/icons/star.svg" alt="icone de estrela"></li>
+            <div class="testimonials__rating" aria-label="Avaliação média 4.96 de 5">
+                <ul class="testimonials__rating-stars" aria-hidden="true">
+                    <li><img src="src/assets/icons/star.svg" alt=""></li>
+                    <li><img src="src/assets/icons/star.svg" alt=""></li>
+                    <li><img src="src/assets/icons/star.svg" alt=""></li>
+                    <li><img src="src/assets/icons/star.svg" alt=""></li>
+                    <li><img src="src/assets/icons/star.svg" alt=""></li>
                 </ul>
-                <span>4.96/5 Avaliação</span>
+                <span class="testimonials__rating-text">
+                    <strong>4.96</strong>/5 <span>de 412 Avaliações</span>
+                </span>
             </div>
-        </article>
-        <main class="testimonials__carousel">
-            <div class="testimonials__carousel-item">
-                <article class="testimonials__carousel-item-article">
-                    <p>
-                        Excelente no atendimento muito educado, pontuais e de extrema confiança eu indico para todas
-                        empresas que eu presto serviço como motorista executivo e quando precisa de motoboy ou logística
-                        eu indico eles. Segurança, pontualidade e muita educação no atendimento ao cliente.
-                    </p>
-                    <ul>
-                        <li><img src="src/assets/icons/star.svg" alt="icone de estrela"></li>
-                        <li><img src="src/assets/icons/star.svg" alt="icone de estrela"></li>
-                        <li><img src="src/assets/icons/star.svg" alt="icone de estrela"></li>
-                        <li><img src="src/assets/icons/star.svg" alt="icone de estrela"></li>
-                        <li><img src="src/assets/icons/star.svg" alt="icone de estrela"></li>
-                    </ul>
-                </article>
-                <div class="testimonials__carousel-item-profile">
-                    <div class="testimonials__carousel-item-profile-image">
-                        <span>JP</span>
-                    </div>
-                    <div class="testimonials__carousel-item-profile-info">
-                        <h3>JP Resenha de Aplicativo</h3>
-                        <span>6 meses atrás</span>
-                    </div>
+        </header>
+
+        <div class="testimonials__body">
+            <aside class="testimonials__aside" data-aos="fade-up" data-aos-delay="100">
+                <div class="testimonials__quotes" aria-hidden="true">
+                    <span>“</span><span>”</span>
                 </div>
-            </div>
-            <div class="testimonials__carousel-item">
-                <article class="testimonials__carousel-item-article">
-                    <p>
-                        Excelente no atendimento muito educado, pontuais e de extrema confiança eu indico para todas
-                        empresas que eu presto serviço como motorista executivo e quando precisa de motoboy ou logística
-                        eu indico eles. Segurança, pontualidade e muita educação no atendimento ao cliente.
-                    </p>
-                    <ul>
-                        <li><img src="src/assets/icons/star.svg" alt="icone de estrela"></li>
-                        <li><img src="src/assets/icons/star.svg" alt="icone de estrela"></li>
-                        <li><img src="src/assets/icons/star.svg" alt="icone de estrela"></li>
-                        <li><img src="src/assets/icons/star.svg" alt="icone de estrela"></li>
-                        <li><img src="src/assets/icons/star.svg" alt="icone de estrela"></li>
-                    </ul>
-                </article>
-                <div class="testimonials__carousel-item-profile">
-                    <div class="testimonials__carousel-item-profile-image">
-                        <span>JP</span>
-                    </div>
-                    <div class="testimonials__carousel-item-profile-info">
-                        <h3>JP Resenha de Aplicativo</h3>
-                        <span>6 meses atrás</span>
-                    </div>
+                <p class="testimonials__aside-text">
+                    Veja o que nossos
+                    clientes estão
+                    comentando
+                </p>
+                <div class="testimonials__controls" aria-label="Controles de depoimentos">
+                    <button class="testimonials__arrow testimonials__arrow--prev" type="button"
+                        aria-label="Depoimento anterior">
+                        <svg width="17" height="14" viewBox="0 0 17 14" fill="none" xmlns="http://www.w3.org/2000/svg"
+                            aria-hidden="true">
+                            <path
+                                d="M0.201582 7.36179L6.38908 13.5493C6.51808 13.6783 6.69305 13.7508 6.87549 13.7508C7.05793 13.7508 7.23289 13.6783 7.36189 13.5493C7.4909 13.4203 7.56337 13.2453 7.56337 13.0629C7.56337 12.8804 7.4909 12.7055 7.36189 12.5765L2.34744 7.56288H15.813C15.9953 7.56288 16.1702 7.49045 16.2991 7.36152C16.4281 7.23259 16.5005 7.05772 16.5005 6.87538C16.5005 6.69305 16.4281 6.51818 16.2991 6.38925C16.1702 6.26032 15.9953 6.18788 15.813 6.18788H2.34744L7.36189 1.17429C7.4909 1.04529 7.56337 0.87032 7.56337 0.687882C7.56337 0.505445 7.4909 0.330479 7.36189 0.201476C7.23289 0.072473 7.05793 0 6.87549 0C6.69305 0 6.51808 0.072473 6.38908 0.201476L0.201582 6.38898C0.137661 6.45283 0.0869503 6.52865 0.0523529 6.61211C0.0177555 6.69557 -5.14984e-05 6.78503 -5.14984e-05 6.87538C-5.14984e-05 6.96573 0.0177555 7.05519 0.0523529 7.13865C0.0869503 7.22212 0.137661 7.29794 0.201582 7.36179Z"
+                                fill="currentColor" />
+                        </svg>
+                    </button>
+                    <span class="testimonials__controls-line" aria-hidden="true"></span>
+                    <button class="testimonials__arrow testimonials__arrow--next" type="button"
+                        aria-label="Próximo depoimento">
+                        <svg width="17" height="14" viewBox="0 0 17 14" fill="none" xmlns="http://www.w3.org/2000/svg"
+                            aria-hidden="true">
+                            <path
+                                d="M16.2989 7.36179L10.1114 13.5493C9.9824 13.6783 9.80744 13.7508 9.625 13.7508C9.44256 13.7508 9.2676 13.6783 9.13859 13.5493C9.00959 13.4203 8.93712 13.2453 8.93712 13.0629C8.93712 12.8804 9.00959 12.7055 9.13859 12.5765L14.153 7.56288H0.6875C0.505164 7.56288 0.330295 7.49045 0.201364 7.36152C0.072433 7.23259 0 7.05772 0 6.87538C0 6.69305 0.072433 6.51818 0.201364 6.38925C0.330295 6.26032 0.505164 6.18788 0.6875 6.18788H14.153L9.13859 1.17429C9.00959 1.04529 8.93712 0.87032 8.93712 0.687882C8.93712 0.505445 9.00959 0.330479 9.13859 0.201476C9.2676 0.072473 9.44256 0 9.625 0C9.80744 0 9.9824 0.072473 10.1114 0.201476L16.2989 6.38898C16.3628 6.45283 16.4135 6.52865 16.4481 6.61211C16.4827 6.69557 16.5005 6.78503 16.5005 6.87538C16.5005 6.96573 16.4827 7.05519 16.4481 7.13865C16.4135 7.22211 16.3628 7.29794 16.2989 7.36179Z"
+                                fill="currentColor" />
+                        </svg>
+                    </button>
                 </div>
-            </div>
-            <div class="testimonials__carousel-item">
-                <article class="testimonials__carousel-item-article">
-                    <p>
-                        Excelente no atendimento muito educado, pontuais e de extrema confiança eu indico para todas
-                        empresas que eu presto serviço como motorista executivo e quando precisa de motoboy ou logística
-                        eu indico eles. Segurança, pontualidade e muita educação no atendimento ao cliente.
-                    </p>
-                    <ul>
-                        <li><img src="src/assets/icons/star.svg" alt="icone de estrela"></li>
-                        <li><img src="src/assets/icons/star.svg" alt="icone de estrela"></li>
-                        <li><img src="src/assets/icons/star.svg" alt="icone de estrela"></li>
-                        <li><img src="src/assets/icons/star.svg" alt="icone de estrela"></li>
-                        <li><img src="src/assets/icons/star.svg" alt="icone de estrela"></li>
+            </aside>
+
+            <section class="splide testimonials__carousel testimonials__carousel-splide"
+                aria-label="Depoimentos de clientes" data-aos="fade-up" data-aos-delay="150">
+                <div class="splide__track">
+                    <ul class="splide__list">
+                        <li class="splide__slide testimonials__carousel-item">
+                            <article class="testimonials__carousel-item-article">
+                                <p>
+                                    Excelente no atendimento muito educado, pontuais e de extrema confiança eu indico
+                                    para todas
+                                    empresas que eu presto serviço como motorista executivo e quando precisa de motoboy
+                                    ou logística
+                                    eu indico eles. Segurança, pontualidade e muita educação no atendimento ao cliente.
+                                </p>
+                                <ul>
+                                    <li><img src="src/assets/icons/star.svg" alt="icone de estrela"></li>
+                                    <li><img src="src/assets/icons/star.svg" alt="icone de estrela"></li>
+                                    <li><img src="src/assets/icons/star.svg" alt="icone de estrela"></li>
+                                    <li><img src="src/assets/icons/star.svg" alt="icone de estrela"></li>
+                                    <li><img src="src/assets/icons/star.svg" alt="icone de estrela"></li>
+                                </ul>
+                            </article>
+                            <div class="testimonials__carousel-item-profile">
+                                <div class="testimonials__carousel-item-profile-image">
+                                    <span>JP</span>
+                                </div>
+                                <div class="testimonials__carousel-item-profile-info">
+                                    <h3>JP Resenha de Aplicativo</h3>
+                                    <span>6 meses atrás</span>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="splide__slide testimonials__carousel-item">
+                            <article class="testimonials__carousel-item-article">
+                                <p>
+                                    Excelente no atendimento muito educado, pontuais e de extrema confiança eu indico
+                                    para todas
+                                    empresas que eu presto serviço como motorista executivo e quando precisa de motoboy
+                                    ou logística
+                                    eu indico eles. Segurança, pontualidade e muita educação no atendimento ao cliente.
+                                </p>
+                                <ul>
+                                    <li><img src="src/assets/icons/star.svg" alt="icone de estrela"></li>
+                                    <li><img src="src/assets/icons/star.svg" alt="icone de estrela"></li>
+                                    <li><img src="src/assets/icons/star.svg" alt="icone de estrela"></li>
+                                    <li><img src="src/assets/icons/star.svg" alt="icone de estrela"></li>
+                                    <li><img src="src/assets/icons/star.svg" alt="icone de estrela"></li>
+                                </ul>
+                            </article>
+                            <div class="testimonials__carousel-item-profile">
+                                <div class="testimonials__carousel-item-profile-image">
+                                    <span>JP</span>
+                                </div>
+                                <div class="testimonials__carousel-item-profile-info">
+                                    <h3>JP Resenha de Aplicativo</h3>
+                                    <span>6 meses atrás</span>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="splide__slide testimonials__carousel-item">
+                            <article class="testimonials__carousel-item-article">
+                                <p>
+                                    Excelente no atendimento muito educado, pontuais e de extrema confiança eu indico
+                                    para todas
+                                    empresas que eu presto serviço como motorista executivo e quando precisa de motoboy
+                                    ou logística
+                                    eu indico eles. Segurança, pontualidade e muita educação no atendimento ao cliente.
+                                </p>
+                                <ul>
+                                    <li><img src="src/assets/icons/star.svg" alt="icone de estrela"></li>
+                                    <li><img src="src/assets/icons/star.svg" alt="icone de estrela"></li>
+                                    <li><img src="src/assets/icons/star.svg" alt="icone de estrela"></li>
+                                    <li><img src="src/assets/icons/star.svg" alt="icone de estrela"></li>
+                                    <li><img src="src/assets/icons/star.svg" alt="icone de estrela"></li>
+                                </ul>
+                            </article>
+                            <div class="testimonials__carousel-item-profile">
+                                <div class="testimonials__carousel-item-profile-image">
+                                    <span>JP</span>
+                                </div>
+                                <div class="testimonials__carousel-item-profile-info">
+                                    <h3>JP Resenha de Aplicativo</h3>
+                                    <span>6 meses atrás</span>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="splide__slide testimonials__carousel-item">
+                            <article class="testimonials__carousel-item-article">
+                                <p>
+                                    Excelente no atendimento muito educado, pontuais e de extrema confiança eu indico
+                                    para todas
+                                    empresas que eu presto serviço como motorista executivo e quando precisa de motoboy
+                                    ou logística
+                                    eu indico eles. Segurança, pontualidade e muita educação no atendimento ao cliente.
+                                </p>
+                                <ul>
+                                    <li><img src="src/assets/icons/star.svg" alt="icone de estrela"></li>
+                                    <li><img src="src/assets/icons/star.svg" alt="icone de estrela"></li>
+                                    <li><img src="src/assets/icons/star.svg" alt="icone de estrela"></li>
+                                    <li><img src="src/assets/icons/star.svg" alt="icone de estrela"></li>
+                                    <li><img src="src/assets/icons/star.svg" alt="icone de estrela"></li>
+                                </ul>
+                            </article>
+                            <div class="testimonials__carousel-item-profile">
+                                <div class="testimonials__carousel-item-profile-image">
+                                    <span>JP</span>
+                                </div>
+                                <div class="testimonials__carousel-item-profile-info">
+                                    <h3>JP Resenha de Aplicativo</h3>
+                                    <span>6 meses atrás</span>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="splide__slide testimonials__carousel-item">
+                            <article class="testimonials__carousel-item-article">
+                                <p>
+                                    Excelente no atendimento muito educado, pontuais e de extrema confiança eu indico
+                                    para todas
+                                    empresas que eu presto serviço como motorista executivo e quando precisa de motoboy
+                                    ou logística
+                                    eu indico eles. Segurança, pontualidade e muita educação no atendimento ao cliente.
+                                </p>
+                                <ul>
+                                    <li><img src="src/assets/icons/star.svg" alt="icone de estrela"></li>
+                                    <li><img src="src/assets/icons/star.svg" alt="icone de estrela"></li>
+                                    <li><img src="src/assets/icons/star.svg" alt="icone de estrela"></li>
+                                    <li><img src="src/assets/icons/star.svg" alt="icone de estrela"></li>
+                                    <li><img src="src/assets/icons/star.svg" alt="icone de estrela"></li>
+                                </ul>
+                            </article>
+                            <div class="testimonials__carousel-item-profile">
+                                <div class="testimonials__carousel-item-profile-image">
+                                    <span>JP</span>
+                                </div>
+                                <div class="testimonials__carousel-item-profile-info">
+                                    <h3>JP Resenha de Aplicativo</h3>
+                                    <span>6 meses atrás</span>
+                                </div>
+                            </div>
+                        </li>
                     </ul>
-                </article>
-                <div class="testimonials__carousel-item-profile">
-                    <div class="testimonials__carousel-item-profile-image">
-                        <span>JP</span>
-                    </div>
-                    <div class="testimonials__carousel-item-profile-info">
-                        <h3>JP Resenha de Aplicativo</h3>
-                        <span>6 meses atrás</span>
-                    </div>
                 </div>
-            </div>
-            <div class="testimonials__carousel-item">
-                <article class="testimonials__carousel-item-article">
-                    <p>
-                        Excelente no atendimento muito educado, pontuais e de extrema confiança eu indico para todas
-                        empresas que eu presto serviço como motorista executivo e quando precisa de motoboy ou logística
-                        eu indico eles. Segurança, pontualidade e muita educação no atendimento ao cliente.
-                    </p>
-                    <ul>
-                        <li><img src="src/assets/icons/star.svg" alt="icone de estrela"></li>
-                        <li><img src="src/assets/icons/star.svg" alt="icone de estrela"></li>
-                        <li><img src="src/assets/icons/star.svg" alt="icone de estrela"></li>
-                        <li><img src="src/assets/icons/star.svg" alt="icone de estrela"></li>
-                        <li><img src="src/assets/icons/star.svg" alt="icone de estrela"></li>
-                    </ul>
-                </article>
-                <div class="testimonials__carousel-item-profile">
-                    <div class="testimonials__carousel-item-profile-image">
-                        <span>JP</span>
-                    </div>
-                    <div class="testimonials__carousel-item-profile-info">
-                        <h3>JP Resenha de Aplicativo</h3>
-                        <span>6 meses atrás</span>
-                    </div>
-                </div>
-            </div>
-            <div class="testimonials__carousel-item">
-                <article class="testimonials__carousel-item-article">
-                    <p>
-                        Excelente no atendimento muito educado, pontuais e de extrema confiança eu indico para todas
-                        empresas que eu presto serviço como motorista executivo e quando precisa de motoboy ou logística
-                        eu indico eles. Segurança, pontualidade e muita educação no atendimento ao cliente.
-                    </p>
-                    <ul>
-                        <li><img src="src/assets/icons/star.svg" alt="icone de estrela"></li>
-                        <li><img src="src/assets/icons/star.svg" alt="icone de estrela"></li>
-                        <li><img src="src/assets/icons/star.svg" alt="icone de estrela"></li>
-                        <li><img src="src/assets/icons/star.svg" alt="icone de estrela"></li>
-                        <li><img src="src/assets/icons/star.svg" alt="icone de estrela"></li>
-                    </ul>
-                </article>
-                <div class="testimonials__carousel-item-profile">
-                    <div class="testimonials__carousel-item-profile-image">
-                        <span>JP</span>
-                    </div>
-                    <div class="testimonials__carousel-item-profile-info">
-                        <h3>JP Resenha de Aplicativo</h3>
-                        <span>6 meses atrás</span>
-                    </div>
-                </div>
-            </div>
-        </main>
+            </section>
+        </div>
     </section>
     <footer class="footer__content">
-        <article class="footer__article">
+        <article class="footer__article" data-aos="fade-up">
             <h1 class="footer__article-title">
-                Pronto para começar? <br>Solicite uma entrega agora mesmo!
+                Peça a sua entrega agora, a nossa
+                equipe espera seu contato!
             </h1>
-            <button>
+            <button class="button__cta" type="button">
                 <span>
                     Solicitar uma entrega
                 </span>
@@ -686,48 +768,29 @@
                 </div>
             </button>
         </article>
-        <div class="footer__policies">
-            <span>© 2026 R Transportes Express. Todos os direitos reservados.</span>
-            <p class="developer-by" style="
-                display: flex;
-                align-items: center;
-                justify-content: center;
-                gap: 12px;
-                font-size: 14px;
-                width: fit-content;
-                padding: 2px 8px 2px 2px;
-                border-radius: 8px;
-                background-color: #000000;
-                cursor: pointer;
-            ">
-                <a href="https://www.alephsramosdev.com.br?utm_source=r-transportes-express&utm_medium=footer&utm_campaign=freelancer"
-                    target="_blank" rel="noopener noreferrer" style="
-                    display: flex;
-                    align-items: center;
-                    gap: 8px;
-                    text-decoration: none;
-                    color: #ffffff;
-                    font-family: 'Urbanist', sans-serif;
-                    font-weight: 400;
-                    font-style: italic;
-                    font-size: 16px;
-                    line-height: 100%;
-                ">
-                    <img src="https://www.alephsramosdev.com.br/alephsramosdev-icon.png" alt="project-by-alephsramosdev"
-                        loading="eager" style="
-                        width: 26px;
-                        height: 26px;
-                        object-fit: contain;
-                    ">
-                    @alephsramosdev
-                </a>
-            </p>
+        <div class="footer__policies" data-aos="fade-up" data-aos-delay="100">
+            <span class="footer__copyright">© 2026 R Transportes Express. Todos os direitos reservados.</span>
+            <a class="footer__developer"
+                href="https://www.alephsramosdev.com.br?utm_source=r-transportes-express&utm_medium=footer&utm_campaign=freelancer"
+                target="_blank" rel="noopener noreferrer" aria-label="Desenvolvido por @alephsramosdev">
+                <span class="footer__developer-icon" aria-hidden="true">
+                    <img src="https://www.alephsramosdev.com.br/alephsramosdev-icon.png" alt="" loading="eager">
+                </span>
+                <span class="footer__developer-handle">@alephsramosdev</span>
+            </a>
         </div>
     </footer>
 
     <script defer src="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/js/splide.min.js"></script>
+    <script defer src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+    <script defer src="src/scripts/aos-init.js"></script>
+    <script defer src="src/scripts/header-menu.js"></script>
+    <script defer src="src/scripts/hero-prize.js"></script>
     <script defer src="src/scripts/about-range-carousel.js"></script>
     <script defer src="src/scripts/services-carousel.js"></script>
+    <script defer src="src/scripts/transport-carousel.js"></script>
+    <script defer src="src/scripts/testimonials-carousel.js"></script>
+    <script defer src="src/scripts/process-progress.js"></script>
 </body>
 
 </html>

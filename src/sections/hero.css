@@ -1,14 +1,21 @@
 .hero__content {
-    border: 1px solid red;
     display: flex;
     align-items: center;
     justify-content: center;
     width: 100%;
     max-width: 1920px;
     padding-left: 48px;
+    margin: 0 auto;
+    position: relative;
+
+    @media (max-width: 992px) {
+        flex-direction: column-reverse;
+        gap: 32px;
+        padding: 0;
+    }
+
 
     & .hero__article {
-        border: 1px solid red;
         display: flex;
         flex-direction: column;
         align-items: flex-start;
@@ -16,13 +23,22 @@
         gap: 16px;
         width: 50%;
 
+        @media (max-width: 992px) {
+            width: 100%;
+            padding: 12px 24px;
+        }
+
         & .hero__promo {
-            border: 1px solid red;
             display: flex;
             align-items: flex-start;
             justify-content: center;
             flex-direction: row;
             gap: 18px;
+            border: 0;
+            background: transparent;
+            text-align: left;
+            cursor: pointer;
+            margin-bottom: 12px ;
 
             & .hero__promo-icon {
                 border: 1px solid #C2070B20;
@@ -34,38 +50,49 @@
                 border-radius: 12px;
                 background-color: #C2070B10;
 
-                & > img {
+                &>img {
                     width: 24px;
                     height: 24px;
                 }
             }
 
             & .hero__promo-container {
-                border: 1px solid red;
                 display: flex;
                 align-items: flex-start;
                 justify-content: center;
                 flex-direction: column;
                 gap: 6px;
-                height: 48px; 
+                min-height: 48px;
 
-                & > h4 {
+                &>h4 {
                     font-weight: 500;
                     line-height: 1;
                     font-size: 20px;
+                    transition: opacity 220ms ease, transform 220ms ease;
                 }
 
-                & > p {
+                &>p {
                     font-weight: 400;
                     line-height: 1;
                     font-size: 16px;
                     color: var(--color-dark-gray);
+                    transition: opacity 220ms ease, transform 220ms ease;
+                }
+            }
+
+            &.is-prize-revealed {
+                & .hero__promo-container>h4 {
+                    color: var(--color-red);
+                }
+
+                & .hero__promo-container .hero__promo-status {
+                    color: var(--color-black);
+                    transform: translateY(0);
                 }
             }
         }
 
         & .hero__texts {
-            border: 1px solid red;
             display: flex;
             align-items: flex-start;
             flex-direction: column;
@@ -73,7 +100,6 @@
             gap: 24px;
 
             & .hero__texts-span {
-                border: 1px solid red;
                 text-transform: uppercase;
                 letter-spacing: 1px;
                 font-size: 16px;
@@ -81,36 +107,63 @@
             }
 
             & .hero__texts-title {
-                border: 1px solid red;
                 font-size: 64px;
                 font-weight: 300;
                 color: var(--color-red);
                 line-height: 1;
+
+                @media (max-width: 768px) {
+                    font-size: 42px;
+                }
             }
 
             & .hero__texts-description {
-                border: 1px solid red;
                 font-size: 20px;
                 font-weight: 400;
                 color: var(--color-dark-gray);
                 line-height: 1.2;
+
+                @media (max-width: 768px) {
+                    font-size: 18px;
+                }
             }
 
         }
     }
 
     & .hero__image-container {
-        border: 1px solid red;
         width: 50%;
         display: flex;
         align-items: center;
         justify-content: center;
 
-        & > img {
+        @media (max-width: 992px) {
+            width: 100%;
+        }
+
+        &>img {
             width: 100%;
             height: calc(100vh - 48px);
             clip-path: circle(80% at 80% 50%);
             object-fit: cover;
+
+            @media (max-width: 768px) {
+                height: auto;
+                clip-path: circle(80% at 50% 15%);
+            }
+        }
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .hero__content {
+        & .hero__promo {
+            transition: none;
+
+            & .hero__promo-container>p,
+            & .hero__promo-container>h4 {
+                transition: none;
+            }
         }
     }
 }

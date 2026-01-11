@@ -19,3 +19,16 @@ html {
     font-family: "DM Sans", system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
     letter-spacing: -0.04em;
 }
+
+html,
+body {
+    overflow-x: hidden;
+}
+
+@supports (overflow: clip) {
+
+    html,
+    body {
+        overflow-x: clip;
+    }
+}
