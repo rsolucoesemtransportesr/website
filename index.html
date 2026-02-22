@@ -57,25 +57,16 @@
         gtag('js', new Date());
         gtag('config', 'AW-16809054579');
 
-        function gtag_report_conversion(url) {
-            var callback = function () {
-                if (typeof (url) != 'undefined') {
-                    window.location = url;
-                }
-            };
+        function gtag_report_conversion() {
+            var callback = function () { };
 
             if (typeof gtag === 'function') {
                 gtag('event', 'conversion', {
                     'send_to': 'AW-16809054579/za4iCNbKzPgbEPOil88-',
-                    'event_callback': callback
+                    'event_callback': callback,
+                    'transport_type': 'beacon'
                 });
-
-                setTimeout(callback, 1200);
-            } else {
-                callback();
             }
-
-            return false;
         }
     </script>
 
@@ -855,10 +846,10 @@
     <script defer src="src/scripts/process-progress.js"></script>
     <script>
         document.addEventListener('DOMContentLoaded', function () {
-            var whatsappLinks = document.querySelectorAll('a[href*="wa.me/"], a[href*="api.whatsapp.com/send"]');
+            var conversionButtons = document.querySelectorAll('.button__cta[href*="wa.me/"], .button__cta[href*="api.whatsapp.com/send"]');
 
-            whatsappLinks.forEach(function (link) {
-                link.addEventListener('click', function () {
+            conversionButtons.forEach(function (button) {
+                button.addEventListener('click', function () {
                     gtag_report_conversion();
                 });
             });
